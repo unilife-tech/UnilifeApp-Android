@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+    <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorPrimary"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layoutDirection="rtl"
+
+
+    />
+   <!-- android:button="@null"
+    android:drawableRight="?android:attr/listChoiceIndicatorMultiple"-->
+</RelativeLayout>

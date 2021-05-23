@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00b0f0</color>
+    <color name="colorPrimaryDark">#bfbebe</color>
+    <color name="colorAccent">#020202</color>
+
+
+    <!--<color name="colorPrimary">@color/cream_white</color>-->
+    <!--<color name="colorPrimaryDark">@color/cream_white</color>-->
+    <!--<color name="colorAccent">@color/magenta</color>-->
+
+    <color name="vdark_grey">#585656</color>
+    <color name="dark_grey">#868686</color>
+    <!--
+        <color name="dark_grey">#868686</color>
+    -->
+    <color name="medium_grey">#a2a1a1</color>
+    <color name="golden">#ffbf00</color>
+    <color name="min_medium_grey">#bfbebe</color>
+    <color name="lgrey">#bebbbb</color>
+    <color name="Olgrey">#d6d3d3</color>
+    <color name="verylgrey">#e2e1e1</color>
+    <color name="light_grey">#f3f3f3</color>
+    <color name="other_grey">#b9b8b8</color>
+    <color name="word_grey">#5E5E5E</color>
+    <color name="group_grey">#CFCFCF</color>
+    <color name="white">#ffffff</color>
+    <color name="medium_black">#444444</color>
+    <color name="black">#000000</color>
+    <color name="chat_rec_color">#444444</color>
+    <color name="replyBackground">#DADADA</color>
+
+    <color name="medium_red">#ed1c24</color>
+    <color name="dark_green">#125014</color>
+
+    <color name="colorGreen">#4CAF50</color>
+
+    <!--   <color name="gradient_green">#08D56C</color>
+       &lt;!&ndash;<color name="gradient_green">#04d268</color>&ndash;&gt;
+       <color name="green">#0ab302</color>
+       <color name="light_green">#04d268</color>
+       <color name="medium_green">#07cc66</color>
+       <color name="rest_green">#08D56C</color>-->
+</resources>

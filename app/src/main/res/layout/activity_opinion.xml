@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    android:background="#ffffff"
+    tools:context=".updated.OpinionActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="What opinion do you wanna Share "
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/text12"
+        app:layout_constraintStart_toEndOf="@+id/imbBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text12"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:onClick="postCall"
+        android:padding="@dimen/_8sdp"
+        android:text="Post"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text" />
+
+    <ImageView
+        android:id="@+id/imbBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="closeView"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/ic_close_black_24dp"
+        android:tint="@color/medium_red"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintEnd_toStartOf="@+id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text" />
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/scrollView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imbBack"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--            <android.support.v7.widget.CardView-->
+<!--                android:id="@+id/cardView"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                app:cardUseCompatPadding="true"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="@dimen/_6sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="@dimen/_48sdp"
+                        android:layout_height="@dimen/_48sdp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/default_profile"
+                        app:civ_border_color="@color/colorPrimary"
+                        app:civ_border_width="@dimen/_2sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Charliz Theron"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imgProfile"
+                        app:layout_constraintTop_toTopOf="@+id/imgProfile" />
+
+                    <EditText
+                        android:id="@+id/edtComment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="start|top"
+                        android:hint="What opinion do you wanna Share"
+                        android:padding="@dimen/_4sdp"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="@+id/txtName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+                    <ImageView
+                        android:id="@+id/imgOpinion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/edtComment"
+                        app:layout_constraintStart_toStartOf="@+id/edtComment"
+                        app:layout_constraintTop_toBottomOf="@id/edtComment" />
+
+                    <ImageView
+                        android:id="@+id/playVideo"
+                        android:layout_width="@dimen/_36sdp"
+                        android:layout_height="@dimen/_36sdp"
+                        android:src="@drawable/ic_play_circle_outline_black_24dp"
+                        android:tint="@color/white"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgOpinion"
+                        app:layout_constraintEnd_toEndOf="@+id/imgOpinion"
+                        app:layout_constraintStart_toStartOf="@+id/imgOpinion"
+                        app:layout_constraintTop_toTopOf="@+id/imgOpinion" />
+
+                    <ImageView
+                        android:id="@+id/imgClose"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/ic_cancel_black_24dp"
+                        android:tint="@color/medium_red"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@+id/imgOpinion"
+                        app:layout_constraintTop_toTopOf="@+id/imgOpinion" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            </android.support.v7.widget.CardView>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relePhotoVideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:id="@+id/line1"
+            android:background="@color/Olgrey"/>
+
+        <TextView
+            android:id="@+id/txtCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_photo_library_black_24dp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:drawableTint="@color/colorPrimary"
+            android:gravity="center"
+            android:onClick="openVideoImage"
+            android:padding="@dimen/_10sdp"
+            android:text="Add Photo/Video"
+            android:textColor="@color/vdark_grey"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/txtCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:gravity="end"
+            android:padding="@dimen/_8sdp"
+            android:text="Done"
+            android:onClick="postCall"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_8sdp"
+        android:elevation="@dimen/_4sdp"
+        android:visibility="gone"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_3sdp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/back_profile_skill"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_photo_library_black_24dp"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableTint="#0098da"
+                android:onClick="openVideoImage"
+                android:padding="@dimen/_6sdp"
+                android:text="Write an opinion and attach a Photo/Video"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/ic_photo_library_black_24dp"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableTint="#a8cf45"
+                android:onClick="openMedia"
+                android:padding="@dimen/_6sdp"
+                android:text="Share a Photo/Video and add comment"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/ic_event_note_black_24dp"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableTint="#9387ff"
+                android:onClick="openEvent"
+                android:padding="@dimen/_6sdp"
+                android:text="Create an Event"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text2" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:drawableStart="@drawable/ic_poll_black_24dp"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableTint="#ff7e7e"
+                android:onClick="openPoll"
+                android:padding="@dimen/_6sdp"
+                android:text="Take a Poll"
+                android:textColor="@color/dark_grey"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

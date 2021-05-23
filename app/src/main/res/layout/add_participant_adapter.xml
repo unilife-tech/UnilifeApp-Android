@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivImg"
+        android:layout_width="@dimen/margin_50"
+        android:layout_height="@dimen/margin_50"
+        android:src="@drawable/no_image"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toTopOf="@id/vLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.jcminarro.roundkornerlayout.RoundKornerLinearLayout
+        android:id="@+id/llTick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_background"
+        android:elevation="@dimen/dp10"
+        app:corner_radius="@dimen/margin_28"
+        app:layout_constraintBottom_toBottomOf="@id/ivImg"
+        app:layout_constraintEnd_toEndOf="@id/ivImg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/margin_20"
+            android:layout_height="@dimen/margin_20"
+            android:padding="4dp"
+            android:src="@drawable/ic_tick" />
+
+    </com.jcminarro.roundkornerlayout.RoundKornerLinearLayout>
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivImg"
+        android:padding="@dimen/dp10"
+        android:singleLine="true"
+        android:textColor="@color/medium_black"
+        android:textSize="@dimen/margin_15"
+        app:layout_constraintBottom_toBottomOf="@id/ivImg"
+        app:layout_constraintEnd_toStartOf="@id/tvAction"
+        app:layout_constraintStart_toEndOf="@id/ivImg"
+        app:layout_constraintTop_toTopOf="@id/ivImg" />
+
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:id="@+id/tvAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_blue_cornor"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_5"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_5"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/margin_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintTop_toTopOf="@id/ivImg" />
+
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_below="@id/ivImg"
+        android:layout_marginTop="@dimen/margin_12"
+        android:background="@color/Olgrey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivImg" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

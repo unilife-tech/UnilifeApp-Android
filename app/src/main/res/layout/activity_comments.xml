@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".updated.CommentsActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Comments"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imbBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imbBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="closeView"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_close_black_24dp"
+        android:tint="@color/medium_red"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text" />
+
+    <TextView
+        android:id="@+id/line1Vd"
+        android:layout_width="0sp"
+        android:layout_height="@dimen/_8sdp"
+        android:layout_marginTop="12dp"
+        android:background="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imbBack" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1Vd">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="visible">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/default_image"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="@dimen/_1sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/robotoregular"
+                android:maxLines="1"
+                android:text="Admin Post"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imgOptions"
+                app:layout_constraintStart_toEndOf="@+id/imgProfile"
+                app:layout_constraintTop_toTopOf="@+id/imgProfile" />
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_access_time_black_24dp"
+                android:drawablePadding="@dimen/_3sdp"
+                android:drawableTint="@color/lgrey"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center_vertical"
+                android:text="56 min ago"
+                android:textColor="@color/lgrey"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@+id/txtName"
+                app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            <ImageView
+                android:id="@+id/imgOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_baseline_more_vert_24"
+                app:layout_constraintBottom_toBottomOf="@+id/txtName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtName" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfile">
+
+                <TextView
+                    android:id="@+id/txtOpinion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgPost"
+                    android:layout_width="0sp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:visibility="visible"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOpinion" />
+
+                <!--        <androidx.constraintlayout.widget.Barrier-->
+                <!--            android:id="@+id/barrier"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            app:barrierDirection="bottom"-->
+                <!--            app:constraint_referenced_ids="imgPost,imgProfile" />-->
+
+                <TextView
+                    android:id="@+id/txtDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgPost" />
+
+                <ImageView
+                    android:id="@+id/playVideo"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:src="@drawable/ic_play_circle_outline_black_24dp"
+                    android:tint="@color/colorPrimary"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgPost"
+                    app:layout_constraintEnd_toEndOf="@+id/imgPost"
+                    app:layout_constraintStart_toStartOf="@+id/imgPost"
+                    app:layout_constraintTop_toTopOf="@+id/imgPost" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintEvent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfile">
+
+                <ImageView
+                    android:id="@+id/imgPostEvnt"
+                    android:layout_width="0sp"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/sports"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:alpha="0.8"
+                    android:background="#272727"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgPostEvnt"
+                    app:layout_constraintEnd_toEndOf="@+id/imgPostEvnt"
+                    app:layout_constraintStart_toStartOf="@+id/imgPostEvnt" />
+
+                <TextView
+                    android:id="@+id/txtEventTitle"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/robotoregular"
+                    android:maxLines="1"
+                    android:text="Lorem Ipsum is simply dummy text "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/btnRegisterEvent"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+                <TextView
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:drawableStart="@drawable/ic_group_add_black_24dp"
+                    android:drawablePadding="@dimen/_3sdp"
+                    android:drawableTint="@color/verylgrey"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/robotoregular"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="0 Members Registered"
+                    android:textColor="@color/verylgrey"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="@+id/txtEventTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/txtEventTitle"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btnRegisterEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/back_button_fill"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Register"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgPostEvnt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/txtDetailsEvnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgPostEvnt" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="constraintImage,constraintEvent,constraintPoll" />
+
+
+            <TextView
+                android:id="@+id/txtLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/ic_favorite_border_black_24dp"
+                android:drawablePadding="@dimen/_2sdp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_4sdp"
+                android:text="Like"
+                android:textColor="@color/vdark_grey"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barrier7" />
+
+            <TextView
+                android:id="@+id/txtComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_mode_comment_black_24dp"
+                android:drawablePadding="@dimen/_2sdp"
+                android:drawableTint="@color/vdark_grey"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_4sdp"
+                android:text="Comment"
+                android:textColor="@color/vdark_grey"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txtLike"
+                app:layout_constraintTop_toTopOf="@+id/txtLike" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtShare"
+                android:drawableStart="@drawable/ic_baseline_share_24"
+                android:drawablePadding="@dimen/_2sdp"
+                android:drawableTint="@color/vdark_grey"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_4sdp"
+                android:text="Share"
+                android:textColor="@color/vdark_grey"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtComment"
+                app:layout_constraintStart_toEndOf="@+id/txtComment"
+                app:layout_constraintTop_toTopOf="@+id/txtComment" />
+
+            <ImageView
+                android:id="@+id/evCount"
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_11sdp"
+                android:src="@drawable/ic_event_count"
+                android:tint="@color/medium_grey"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/txtEventCount"
+                app:layout_constraintEnd_toStartOf="@+id/txtEventCount"
+                app:layout_constraintTop_toTopOf="@+id/txtEventCount" />
+
+            <TextView
+                android:id="@+id/txtEventCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_3sdp"
+                android:drawableTint="@color/medium_grey"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_2sdp"
+                android:text="0"
+                android:visibility="gone"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtLikeCount"
+                app:layout_constraintEnd_toStartOf="@+id/txtLikeCount"
+                app:layout_constraintTop_toTopOf="@+id/txtLikeCount" />
+
+            <TextView
+                android:id="@+id/txtLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_favorite_border_black_2"
+                android:drawablePadding="@dimen/_2sdp"
+                android:drawableTint="@color/medium_grey"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_2sdp"
+                android:text="0"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/txtCommentCount"
+                app:layout_constraintTop_toTopOf="@+id/txtCommentCount" />
+
+            <TextView
+                android:id="@+id/txtCommentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:drawableStart="@drawable/ic_mode_comment_2"
+                android:drawablePadding="@dimen/_2sdp"
+                android:drawableTint="@color/medium_grey"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_2sdp"
+                android:text="0"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtComment"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="0sp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="8dp"
+                android:background="@color/light_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtLike" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintPoll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfile">
+
+                <TextView
+                    android:id="@+id/txtDetailsPoll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--        <TextView-->
+                <!--            android:id="@+id/option1"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginTop="16dp"-->
+                <!--            android:layout_marginEnd="16dp"-->
+                <!--            android:background="@drawable/back_green"-->
+                <!--            android:gravity="center"-->
+                <!--            android:padding="@dimen/_8sdp"-->
+                <!--            android:text="Yes"-->
+                <!--            android:textColor="@color/vdark_grey"-->
+                <!--            android:textSize="@dimen/_14sdp"-->
+                <!--            app:layout_constraintEnd_toStartOf="@+id/guideline5"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/txtDetailsPoll"-->
+                <!--            app:layout_constraintTop_toBottomOf="@+id/txtDetailsPoll" />-->
+
+                <!--        <TextView-->
+                <!--            android:id="@+id/option2"-->
+                <!--            android:layout_width="0dp"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginStart="16dp"-->
+                <!--            android:background="@drawable/back_red"-->
+                <!--            android:gravity="center"-->
+                <!--            android:padding="@dimen/_8sdp"-->
+                <!--            android:text="No"-->
+                <!--            android:textColor="@color/vdark_grey"-->
+                <!--            android:textSize="@dimen/_14sdp"-->
+                <!--            app:layout_constraintEnd_toEndOf="@+id/txtDetailsPoll"-->
+                <!--            app:layout_constraintStart_toStartOf="@+id/guideline5"-->
+                <!--            app:layout_constraintTop_toTopOf="@+id/option1" />-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycvlerPoll"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintEnd_toEndOf="@+id/txtDetailsPoll"
+                    app:layout_constraintStart_toStartOf="@+id/txtDetailsPoll"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDetailsPoll" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycvlerView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_8sdp"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCommentCount" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/edtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/back_profile_skill"
+        android:hint="Write a comment"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_send"
+        android:onClick="setComment"
+        android:padding="@dimen/_4sdp"
+        android:src="@drawable/ic_send_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edtMessage"
+        app:layout_constraintEnd_toEndOf="@+id/edtMessage"
+        app:layout_constraintTop_toTopOf="@+id/edtMessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

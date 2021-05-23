@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_45sdp">
+
+    <RelativeLayout
+        android:id="@+id/rel_layout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:background="@drawable/bg_msg_from"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_4sdp"
+        android:paddingBottom="@dimen/_3sdp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txtSenderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Rajesh Krishan"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clReplay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_below="@+id/txtSenderName"
+            android:layout_marginTop="4dp"
+            android:background="@color/light_grey"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/vline"
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="0sp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtSenderNameReplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Sender Name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/vline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMessageReplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Message which is swapped"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtSenderNameReplay"
+                app:layout_constraintTop_toBottomOf="@+id/txtSenderNameReplay" />
+
+            <ImageView
+                android:id="@+id/imgReplay"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="0sp"
+                android:src="@drawable/default_image"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/constraintMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSenderName"
+            android:layout_alignStart="@+id/txtSenderName">
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="I think you have to add an ID to the textview as well, even though you won't have to reference it. Also you can addView and set parameters in one call:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgChats"
+                android:layout_width="@dimen/_210sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/default_profile"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imgVideo"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_play_circle_outline_black_24dp"
+                android:tint="@color/white"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfileAudio"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/default_profile"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_1sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgAudio"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:background="@drawable/circle_background"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_baseline_mic_24"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imgProfileAudio"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/imgProfileAudio"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudio"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/playAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:src="@drawable/ic_baseline_play_arrow_24"
+                    android:tint="@color/dark_grey"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgProfileAudio"
+                    app:layout_constraintStart_toEndOf="@+id/imgProfileAudio"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudio" />
+
+                <ImageView
+                    android:id="@+id/pauseAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:src="@drawable/ic_baseline_pause_24"
+                    android:tint="@color/dark_grey"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgProfileAudio"
+                    app:layout_constraintStart_toEndOf="@+id/imgProfileAudio"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudio" />
+
+                <SeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/playAudio"
+                    app:layout_constraintStart_toEndOf="@+id/playAudio"
+                    app:layout_constraintTop_toTopOf="@+id/playAudio" />
+
+                <TextView
+                    android:id="@+id/txtAudioDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="-:-"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playAudio"
+                    app:layout_constraintStart_toEndOf="@+id/seekbar"
+                    app:layout_constraintTop_toTopOf="@+id/playAudio" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txtMessage"
+                android:layout_gravity="bottom|right"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toEndOf="@+id/txtMessage"
+                android:text="12:15"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/constraintMain"
+            android:layout_alignEnd="@+id/constraintMain"
+            android:layout_gravity="bottom|right"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:paddingEnd="@dimen/_3sdp"
+            android:text="12:15"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/_9sdp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:padding="0sp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        android:tint="#dbf7c6" />
+
+</FrameLayout>

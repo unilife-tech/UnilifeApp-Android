@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_5"
+    tools:context=".login.VerifyEmailActivity">
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="Verify email"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtOTP"
+        app:layout_constraintEnd_toEndOf="@+id/edtOTP"
+        app:layout_constraintStart_toStartOf="@+id/edtOTP" />
+
+    <EditText
+        android:id="@+id/edtOTP"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/back_edittext_login"
+        android:hint="Enter OTP"
+        android:padding="@dimen/_10sdp"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <TextView
+        android:id="@+id/txtNext"
+        android:layout_width="0dp"
+        android:onClick="callSubmit"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edtOTP"
+        app:layout_constraintStart_toStartOf="@+id/edtOTP"
+        app:layout_constraintTop_toBottomOf="@+id/edtOTP" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

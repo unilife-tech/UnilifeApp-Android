@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".brands.BrandsHome">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <EditText
+                android:id="@+id/etSearchBrand"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/back_edittext"
+                android:drawableStart="@drawable/search"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableTint="@color/dark_grey"
+                android:hint="@string/search_coupons_more"
+                android:imeOptions="actionSearch"
+                android:paddingStart="@dimen/_8sdp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@+id/blogSetting"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/blogSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:onClick="openSettings"
+                android:src="@drawable/ic_baseline_settings_24"
+                android:tint="@color/dark_grey"
+                app:layout_constraintBottom_toBottomOf="@+id/etSearchBrand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etSearchBrand" />
+
+            <Button
+                android:id="@+id/tvcategories"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/back_button_brand"
+                android:gravity="center"
+                android:onClick="showDialog"
+                android:text="Categories"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/etSearchBrand"
+                app:layout_constraintTop_toBottomOf="@+id/etSearchBrand" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/brandPager"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@color/white"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvcategories" />
+
+            <me.relex.circleindicator.CircleIndicator
+                android:id="@+id/indicatorbrand"
+                android:layout_width="0sp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center"
+                app:ci_drawable="@drawable/circle"
+                app:ci_drawable_unselected="@drawable/white_circle"
+                app:layout_constraintBottom_toBottomOf="@+id/brandPager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycvlerView"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brandPager"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <!--            <include-->
+            <!--                layout="@layout/layout_brand_bottom"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="16dp"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/recycvlerView" />-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerBottomCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycvlerView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layoutEmpty"
+        android:layout_width="0dp"
+        android:layout_height="0sp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtMiddle"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/empty_icon" />
+
+        <TextView
+            android:id="@+id/txtMiddle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtMiddle"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:text="No Offers Yet"
+            android:textColor="@color/vdark_grey"
+            android:textSize="@dimen/_18sdp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

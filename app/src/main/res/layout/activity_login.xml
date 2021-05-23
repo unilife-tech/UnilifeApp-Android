@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_3"
+    tools:context=".Login">
+
+    <EditText
+        android:id="@+id/edtUsername"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/back_edittext_login"
+        android:hint="Enter Full Name"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/back_edittext_login"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/edtUsername"
+        app:layout_constraintStart_toStartOf="@+id/edtUsername"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsername" />
+
+    <TextView
+        android:id="@+id/txtSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="@string/forgot_password"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSignIn" />
+
+    <TextView
+        android:id="@+id/txtSignUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--        xmlns:tools="http://schemas.android.com/tools"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:background="@drawable/splash2"-->
+    <!--        android:orientation="vertical"-->
+    <!--        tools:context=".Login">-->
+
+    <!--    <ImageView-->
+    <!--            android:id="@+id/ivBackarrow"-->
+    <!--            android:layout_width="@dimen/margin_15"-->
+    <!--            android:layout_height="@dimen/margin_25"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:layout_marginTop="2dp"-->
+    <!--            android:background="@drawable/ic_back_arrow"-->
+    <!--            android:backgroundTint="@color/white"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toStartOf="@+id/tvTitle"-->
+    <!--            app:layout_constraintHorizontal_bias="0.007"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.07999998" />-->
+
+
+    <!--    <TextView-->
+    <!--            android:id="@+id/tvTitle"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:layout_centerHorizontal="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:text="Sign In"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/margin_25sp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.084" />-->
+
+
+    <!--    <EditText-->
+    <!--            android:id="@+id/etUsername"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="15dp"-->
+    <!--            android:layout_marginLeft="15dp"-->
+    <!--            android:background="@null"-->
+    <!--            android:drawableLeft="@drawable/signup_user"-->
+    <!--            android:drawablePadding="@dimen/margin_10"-->
+    <!--            android:hint="@string/full_name"-->
+    <!--            android:padding="@dimen/margin_8"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:textColor="@color/colorPrimary"-->
+    <!--            android:textColorHint="@color/black"-->
+    <!--            android:textSize="@dimen/margin_12"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.0"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.32" />-->
+
+    <!--    &lt;!&ndash;-->
+    <!--        android:text="user51"-->
+    <!--    &ndash;&gt;-->
+
+    <!--    <View-->
+    <!--            android:id="@+id/view2"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_marginStart="@dimen/margin_15"-->
+    <!--            android:layout_marginEnd="@dimen/margin_15"-->
+    <!--            android:background="@color/medium_black"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/etUsername"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <!--    <EditText-->
+    <!--            android:id="@+id/etpassword"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="15dp"-->
+    <!--            android:layout_marginLeft="15dp"-->
+    <!--            android:layout_marginTop="@dimen/margin_5"-->
+    <!--            android:background="@null"-->
+    <!--            android:drawableLeft="@drawable/key"-->
+    <!--            android:drawablePadding="@dimen/margin_10"-->
+    <!--            android:hint="Enter Password"-->
+    <!--            android:inputType="textPassword"-->
+    <!--            android:padding="@dimen/margin_8"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:textColor="@color/colorPrimary"-->
+    <!--            android:textColorHint="@color/black"-->
+    <!--            android:textSize="@dimen/margin_12"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.0"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.42000002" />-->
+
+    <!--    &lt;!&ndash;-->
+    <!--        android:text="123456"-->
+    <!--    &ndash;&gt;-->
+
+
+    <!--    <View-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="1dp"-->
+    <!--            android:layout_marginStart="@dimen/margin_15"-->
+    <!--            android:layout_marginEnd="@dimen/margin_15"-->
+    <!--            android:background="@color/medium_black"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/etpassword"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <!--    <unilife.com.unilife.utils.RegularTextView-->
+    <!--            android:id="@+id/tvSigin"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/button_border"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:paddingLeft="@dimen/margin_30"-->
+    <!--            android:paddingTop="@dimen/margin_10"-->
+    <!--            android:paddingRight="@dimen/margin_30"-->
+    <!--            android:paddingBottom="@dimen/margin_10"-->
+    <!--            android:text="Sign In"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/margin_20"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.617" />-->
+
+
+    <!--    <unilife.com.unilife.utils.RegularTextView-->
+    <!--            android:id="@+id/tvForgetPasswd"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:text="@string/forgetpassword"-->
+    <!--            android:textColor="@color/colorPrimary"-->
+    <!--            android:textSize="@dimen/margin_15"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.715" />-->
+
+    <!--    <TextView-->
+    <!--            android:id="@+id/tvSignUp"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="center_horizontal"-->
+    <!--            android:paddingBottom="@dimen/margin_25"-->
+    <!--            android:text="@string/signup"-->
+    <!--            android:textColor="@color/colorPrimary"-->
+    <!--            android:textSize="@dimen/margin_20"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.976" />-->
+
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

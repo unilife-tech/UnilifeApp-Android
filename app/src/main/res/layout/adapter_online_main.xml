@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@color/light_grey"
+        android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:text="Food and Beverages"
+        android:textColor="@color/medium_black"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1sp"
+        android:background="@color/medium_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/line1">
+
+        <unilife.com.unilife.utils.RegularTextView
+            android:id="@+id/txtDiscountMsg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingTop="@dimen/_8sdp"
+            android:text="Enjoy Saving Online"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <unilife.com.unilife.utils.RegularTextView
+            android:id="@+id/tvDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="This waterfall system (India's second highest) varies from a trickle to a torrent in monsoon season"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@+id/txtDiscountMsg"
+            app:layout_constraintStart_toStartOf="@+id/txtDiscountMsg"
+            app:layout_constraintTop_toBottomOf="@+id/txtDiscountMsg" />
+
+        <unilife.com.unilife.utils.RegularTextView
+            android:id="@+id/regularTextTerms"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Terms &amp; Condiotions"
+            android:textColor="@color/vdark_grey"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txtDiscountMsg"
+            app:layout_constraintStart_toStartOf="@+id/txtDiscountMsg"
+            app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+
+        <unilife.com.unilife.utils.RegularTextView
+            android:id="@+id/tvTermsDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1. Jog Falls is a waterfall on
+        \n2. the Sharavati river located in the Western Ghats in Siddapur taluk Uttara Kannada District and haviving
+        \n3. its view point in Sagara taluk"
+            android:textColor="@color/lgrey"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="@+id/txtDiscountMsg"
+            app:layout_constraintStart_toStartOf="@+id/regularTextTerms"
+            app:layout_constraintTop_toBottomOf="@+id/regularTextTerms" />
+
+        <Button
+            android:id="@+id/btnRedeem"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:background="@drawable/back_button_contact"
+            android:onClick="callService"
+            android:text="Reedem"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tvTermsDetails"
+            app:layout_constraintStart_toStartOf="@+id/txtDiscountMsg"
+            app:layout_constraintTop_toBottomOf="@+id/tvTermsDetails" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1sp"
+            android:layout_marginTop="16dp"
+            android:background="@color/medium_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRedeem" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    <android.support.v7.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:nestedScrollingEnabled="false"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/txtHeader"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/line" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

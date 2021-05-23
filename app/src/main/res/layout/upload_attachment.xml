@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_10"
+>
+
+    <TextView
+            android:id="@+id/tvCameraImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_rcorner"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_5"
+            android:padding="@dimen/margin_10"
+            android:text="Take Image"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/margin_18"/>
+
+    <TextView
+            android:id="@+id/tvVideoCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_rcorner"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_5"
+            android:padding="@dimen/margin_10"
+            android:text="Take Video"
+            android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/tvCameraImage"
+            android:textSize="@dimen/margin_18"/>
+
+    <TextView
+            android:id="@+id/tvGalleryImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_rcorner"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_5"
+            android:padding="@dimen/margin_10"
+            android:text="Upload Image"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/margin_18"
+            android:layout_below="@+id/tvVideoCamera"
+    />
+
+    <TextView
+            android:id="@+id/tvUploadVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_rcorner"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_5"
+            android:padding="@dimen/margin_10"
+            android:text="Upload video"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/margin_18"
+            android:layout_below="@+id/tvGalleryImage"
+
+    />
+
+
+    <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUploadVideo"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/bg_white_rcorner"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="Cancel"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/margin_18"/>
+
+</RelativeLayout>

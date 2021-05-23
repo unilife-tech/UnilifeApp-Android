@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chat.CreateGroupActivity">
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="0sp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorPrimary"
+        android:drawableStart="@drawable/ic_chevron_left_black_24dp"
+        android:drawableTint="@color/white"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="start|center_vertical"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:text="Create Group"
+        android:onClick="goBack"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivGroupImg"
+        android:layout_width="@dimen/_72sdp"
+        android:layout_height="@dimen/_72sdp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/default_image"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="@dimen/margin_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+
+    <EditText
+        android:id="@+id/edtGroupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:hint="Enter Group Name"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivGroupImg" />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/back_edittext"
+        android:drawableStart="@drawable/search"
+        android:drawablePadding="@dimen/_6sdp"
+        android:drawableTint="@color/medium_grey"
+        android:hint="Search by name"
+        android:padding="@dimen/_4sdp"
+        android:singleLine="true"
+        android:textColor="@color/dark_grey"
+        android:textColorHint="@color/dark_grey"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@+id/edtGroupName"
+        app:layout_constraintStart_toStartOf="@+id/edtGroupName"
+        app:layout_constraintTop_toBottomOf="@+id/edtGroupName" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rrecyclerFriendList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCreateGrp"
+        app:layout_constraintEnd_toEndOf="@+id/edtGroupName"
+        app:layout_constraintStart_toStartOf="@+id/edtGroupName"
+        app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:id="@+id/tvCreateGrp"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/back_button_fill"
+        android:gravity="center"
+        android:onClick="createGroupCall"
+        android:text=" Create Group "
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edtGroupName"
+        app:layout_constraintStart_toStartOf="@+id/edtGroupName" />
+
+</android.support.constraint.ConstraintLayout>

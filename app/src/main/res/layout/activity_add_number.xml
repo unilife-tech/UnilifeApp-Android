@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_6"
+    tools:context=".login.AddNumberActivity">
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="Find your friends"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSubHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="To view friends on unilife,\n you need to verify your phone number"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txtHeader"
+        app:layout_constraintStart_toStartOf="@+id/txtHeader"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <TextView
+        android:id="@+id/txtCountryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/back_edittext_login"
+        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_6sdp"
+        android:onClick="openCountrySelection"
+        android:text="United Arab Emirates"
+        android:textColor="@color/vdark_grey"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSubHeader" />
+
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_2sdp"
+        android:layout_marginTop="3dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/txtHeader"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeader" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constContact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_edittext_login"
+        app:layout_constraintEnd_toEndOf="@+id/txtCountryName"
+        app:layout_constraintStart_toStartOf="@+id/txtCountryName"
+        app:layout_constraintTop_toBottomOf="@+id/txtCountryName">
+
+        <EditText
+            android:id="@+id/edtCountryCode"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_1sdp"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="+971"
+            android:focusable="false"
+            android:hint="Country code"
+            android:padding="@dimen/_8sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtMobile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="Enter phone number"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edtCountryCode"
+            app:layout_constraintTop_toTopOf="@+id/edtCountryCode" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/back_button_contact"
+        android:onClick="goNext"
+        android:text="Next"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCountryName"
+        app:layout_constraintStart_toStartOf="@+id/txtCountryName"
+        app:layout_constraintTop_toBottomOf="@+id/constContact" />
+
+</android.support.constraint.ConstraintLayout>

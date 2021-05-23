@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="example.javatpoint.com.optionmenu.MainActivity">
+
+    <item  android:id="@+id/create_group"
+           android:title="Group"/>
+    <item  android:id="@+id/change_walpaper"
+           android:title="Change Chat Wallpaper"/>
+    <item  android:id="@+id/go_private"
+           android:title="Go Private"/>
+    <item  android:id="@+id/requests_recieved"
+           android:title="Requests Recieved"/>
+           app:showAsAction="withText" />
+</menu>

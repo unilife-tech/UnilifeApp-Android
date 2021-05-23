@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:id="@+id/regularTextView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Enjoy Saving Online"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:id="@+id/tvDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="This waterfall system (India's second highest) varies from a trickle to a torrent in monsoon season"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="@+id/regularTextView3"
+        app:layout_constraintStart_toStartOf="@+id/regularTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/regularTextView3" />
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:id="@+id/regularTextTerms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Terms &amp; Condiotions"
+        android:textColor="@color/vdark_grey"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/regularTextView3"
+        app:layout_constraintStart_toStartOf="@+id/regularTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:id="@+id/tvTermsDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="1. Jog Falls is a waterfall on
+        \n2. the Sharavati river located in the Western Ghats in Siddapur taluk Uttara Kannada District and haviving
+        \n3. its view point in Sagara taluk"
+        android:textColor="@color/lgrey"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="@+id/regularTextView3"
+        app:layout_constraintStart_toStartOf="@+id/regularTextTerms"
+        app:layout_constraintTop_toBottomOf="@+id/regularTextTerms" />
+
+    <Button
+        android:id="@+id/btnRedeem"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:background="@drawable/back_button_contact"
+        android:onClick="callService"
+        android:text="Reedem"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTermsDetails"
+        app:layout_constraintStart_toStartOf="@+id/regularTextView3"
+        app:layout_constraintTop_toBottomOf="@+id/tvTermsDetails" />
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="1sp"
+        android:layout_marginTop="16dp"
+        android:background="@color/medium_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRedeem" />
+
+</android.support.constraint.ConstraintLayout>

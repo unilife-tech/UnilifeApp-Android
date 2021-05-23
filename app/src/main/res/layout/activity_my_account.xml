@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.MyAccountActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/regularTextView"
+                android:layout_width="0sp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@color/colorPrimary"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:paddingStart="@dimen/_12sdp"
+                android:text="My Account"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imbBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goBack"
+                android:src="@drawable/ic_chevron_left_black_24dp"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/regularTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/regularTextView" />
+
+            <ImageView
+                android:id="@+id/ivback_arrow"
+                android:layout_width="24sp"
+                android:layout_height="32sp"
+                android:layout_marginStart="16sp"
+                android:background="@drawable/ic_back_arrow"
+                android:backgroundTint="@color/white"
+                android:paddingBottom="@dimen/margin_15"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgBanner"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_120sdp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_profile_back"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regularTextView" />
+
+            <ImageView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/link"
+                android:onClick="openLinkedIn"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBanner"
+                app:layout_constraintEnd_toStartOf="@+id/imgProfile"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:src="@drawable/default_image"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBanner"
+                app:layout_constraintEnd_toEndOf="@+id/imgBanner"
+                app:layout_constraintStart_toStartOf="@+id/ivback_arrow"
+                app:layout_constraintTop_toBottomOf="@+id/imgBanner" />
+
+            <ImageView
+                android:id="@+id/imgCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
+                app:layout_constraintEnd_toEndOf="@+id/imgProfile"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/imgProfile"
+                app:layout_constraintTop_toTopOf="@+id/imgProfile"
+                app:layout_constraintVertical_bias="0.9" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:onClick="onChooseFile"
+                android:src="@drawable/ic_camera_2"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBanner"
+                app:layout_constraintEnd_toEndOf="@+id/imgBanner"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regularTextView"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/robotoregular"
+                android:text="-"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+            <TextView
+                android:id="@+id/txtAbout"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="@dimen/_3sdp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtAbout">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/robotoregular"
+                        android:text="Personal Mission Statement"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/btnEdit2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtPersonalMission"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="start"
+                        android:text="-"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/btnEditStatement"
+                        app:layout_constraintStart_toStartOf="@+id/txt1"
+                        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+                    <TextView
+                        android:id="@+id/btnEditStatement"
+                        style="@style/TextEditProfile"
+                        android:layout_width="@dimen/_52sdp"
+                        android:layout_marginEnd="8sp"
+                        android:onClick="openEditStatement"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/txt1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/txt3"
+                style="@style/TextStyleProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_assignment"
+                android:text="Highlights"
+                app:layout_constraintEnd_toStartOf="@+id/btnEdit3"
+                app:layout_constraintStart_toStartOf="@+id/txtAbout"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_3sdp"
+                app:cardElevation="@dimen/_3sdp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_8sdp">
+
+                    <TextView
+                        android:id="@+id/txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_school_24px"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="start"
+                        android:text="Currently working at"
+                        android:textColor="@color/lgrey"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtCurrentWorking"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="start"
+                        android:text="-"
+                        android:textColor="@color/vdark_grey"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/txt4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:drawableStart="@drawable/ic_school_24px"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="start"
+                        android:text="Currently studying at"
+                        android:textColor="@color/lgrey"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="@+id/txt4"
+                        app:layout_constraintTop_toBottomOf="@+id/txtCurrentWorking" />
+
+                    <TextView
+                        android:id="@+id/txtcurrentStudying"
+                        android:layout_width="189dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="start"
+                        android:text="-"
+                        android:textColor="@color/vdark_grey"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintStart_toEndOf="@+id/txt5"
+                        app:layout_constraintTop_toTopOf="@+id/txt5" />
+
+                    <TextView
+                        android:id="@+id/txt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:drawableStart="@drawable/ic_place_24px"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_4sdp"
+                        android:text="Lives in Dubai"
+                        android:textColor="@color/lgrey"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="@+id/txt4"
+                        app:layout_constraintTop_toBottomOf="@+id/txtcurrentStudying" />
+
+                    <TextView
+                        android:id="@+id/txtLivesIn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="start"
+                        android:textColor="@color/vdark_grey"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/txt6"
+                        app:layout_constraintTop_toTopOf="@+id/txt6" />
+
+                    <TextView
+                        android:id="@+id/txt7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:drawableStart="@drawable/ic_place_24px"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_4sdp"
+                        android:text="From"
+                        android:textColor="@color/lgrey"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="@+id/txt4"
+                        app:layout_constraintTop_toBottomOf="@+id/txtLivesIn" />
+
+                    <TextView
+                        android:id="@+id/txtFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/robotobold"
+                        android:gravity="start"
+                        android:text="-"
+                        android:textColor="@color/vdark_grey"
+                        android:textSize="@dimen/_13sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/txt7"
+                        app:layout_constraintTop_toTopOf="@+id/txt7" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtCourse"
+                style="@style/TextStyleProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:drawableStart="@drawable/ic_membership"
+                android:text="Courses"
+                app:layout_constraintEnd_toStartOf="@+id/btnEdit4"
+                app:layout_constraintStart_toStartOf="@+id/txt3"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+            <!--    <android.support.v7.widget.CardView-->
+            <!--        -->
+            <!--        android:layout_width="0dp"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginTop="16dp"-->
+            <!--        app:cardCornerRadius="@dimen/_3sdp"-->
+            <!--        app:cardElevation="@dimen/_3sdp"-->
+            <!--        app:cardUseCompatPadding="true"-->
+            <!--        app:layout_constraintEnd_toEndOf="@+id/txt4"-->
+            <!--        app:layout_constraintStart_toStartOf="@+id/txt5"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/txt4">-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerCourse"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/btnEdit3"
+                app:layout_constraintStart_toStartOf="@+id/txt3"
+                app:layout_constraintTop_toBottomOf="@+id/txtCourse" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <Button
+                android:id="@+id/btnSeeFriends"
+                android:layout_width="0sp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="16dp"
+                android:onClick="openFriendList"
+                android:background="@drawable/back_button"
+                android:padding="@dimen/_8sdp"
+                android:text="See Friends"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="@+id/btnEdit4"
+                app:layout_constraintStart_toStartOf="@+id/txt3"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerCourse" />
+
+            <include
+                layout="@layout/layout_profile_1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/btnSeeFriends"
+                app:layout_constraintStart_toStartOf="@+id/btnSeeFriends"
+                app:layout_constraintTop_toBottomOf="@+id/btnSeeFriends" />
+
+            <TextView
+                style="@style/TextEditProfile"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="openEditIntro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgBanner" />
+
+            <TextView
+                android:id="@+id/btnEdit3"
+                style="@style/TextEditProfile"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_marginEnd="16dp"
+                android:onClick="openEditHighlights"
+                app:layout_constraintBottom_toBottomOf="@+id/txt3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt3" />
+
+            <TextView
+                android:id="@+id/btnEdit4"
+                style="@style/TextEditProfile"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_marginEnd="16dp"
+                android:onClick="openEditCourses"
+                app:layout_constraintBottom_toBottomOf="@+id/txtCourse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtCourse" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

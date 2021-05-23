@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/card1"
+    android:layout_gravity="end"
+    android:visibility="visible"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardElevation="@dimen/_3sdp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#dcf4fe">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clReplayOG"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_alignParentEnd="true"
+            android:background="@color/light_grey"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/vline"
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="0sp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txtSenderNameReplayOG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Sender Name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imgReplayOG"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMessageReplayOG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Message which is swapped"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toStartOf="@+id/imgReplayOG"
+                app:layout_constraintStart_toStartOf="@+id/txtSenderNameReplayOG"
+                app:layout_constraintTop_toBottomOf="@+id/txtSenderNameReplayOG" />
+
+            <ImageView
+                android:id="@+id/imgReplayOG"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="0sp"
+                android:src="@drawable/default_image"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintMainOG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/clReplayOG"
+            android:layout_alignStart="@+id/clReplayOG"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/_4sdp">
+
+            <TextView
+                android:id="@+id/txtMessageOG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/_4sdp"
+                android:text="ok sir"
+                android:textColor="@color/vdark_grey"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/txtTimeOG"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgChatsOG"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/default_profile"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgVideoOG"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/ic_play_circle_outline_black_24dp"
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/imgChatsOG"
+                app:layout_constraintEnd_toEndOf="@+id/imgChatsOG"
+                app:layout_constraintStart_toStartOf="@+id/imgChatsOG"
+                app:layout_constraintTop_toTopOf="@+id/imgChatsOG" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintAudioOG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfileAudioOG"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/default_profile"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_1sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgAudioOG"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:background="@drawable/circle_background"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_baseline_mic_24"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/playAudioOG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_play_arrow_24"
+                    android:tint="@color/dark_grey"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintStart_toEndOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudioOG" />
+
+                <ImageView
+                    android:id="@+id/pauseAudioOG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_pause_24"
+                    android:tint="@color/dark_grey"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintStart_toEndOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudioOG" />
+
+                <SeekBar
+                    android:id="@+id/seekbarOG"
+                    android:layout_width="@dimen/_148sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playAudioOG"
+                    app:layout_constraintEnd_toStartOf="@+id/txtAudioDurationOG"
+                    app:layout_constraintStart_toEndOf="@+id/playAudioOG"
+                    app:layout_constraintTop_toTopOf="@+id/playAudioOG" />
+
+                <TextView
+                    android:id="@+id/txtAudioDurationOG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="end"
+                    android:text="-:-"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playAudioOG"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playAudioOG" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrierOG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="txtMessageOG,imgChatsOG,constraintAudioOG" />
+
+            <TextView
+                android:id="@+id/txtTimeOG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:paddingEnd="@dimen/_2sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="3:20 PM"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/barrierOG" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

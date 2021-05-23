@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="unilife.com.unilife">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".utils.AppController"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/fullbackup"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:noHistory="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@drawable/app_logo"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="ExtraText,GoogleAppIndexingWarning">
+        <activity android:name=".brands.RedeemSuccessActivity"/>
+        <activity android:name=".brands.BranchReceiptActivity" />
+        <activity android:name=".brands.InstoreRedeemActivity" />
+        <activity android:name=".brands.RedeemActivity" />
+        <activity android:name=".login.SelectCountryActivity" />
+        <activity android:name=".login.AddNumberActivity" />
+        <activity android:name=".login.AddFromContactActivity" />
+        <activity android:name=".login.SearchUniversity" />
+        <activity android:name=".login.InviteActivity" />
+        <activity android:name=".login.AddPhotoActivity" />
+        <activity android:name=".login.PasswordActivity" />
+        <activity android:name=".login.BirthdayActivity" />
+        <activity android:name=".login.SelectGenderActivity" />
+        <activity android:name=".login.FirstLastNameActivity" />
+        <activity android:name=".login.VerifyEmailActivity" />
+        <activity android:name=".login.SchoolNameActivity" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".login.FirstLoginActivity" />
+        <activity
+            android:name=".chat.CreateGroupActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".chat.ReceivedRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.ReportReasonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.update.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.OtherProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".blogs.BlogDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.update.ui.UploadFileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.update.FriendDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.update.ChatDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".chat.update.ChatActivity"
+            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".brands.BrandDetails"-->
+<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".updated.BottomSheetExample"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditCoursesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditPersonalStatementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".blogs.BlogViewAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".brands.BrandViewAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.HomeNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".brands.BrandsHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".updated.CommentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.MyAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditInterestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditSkillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".updated.MediaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".updated.EventActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".updated.OpinionActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".updated.PollActivity" />
+        <activity
+            android:name=".profile.editprofiel.EditSocialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditExperienceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditAchivementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditEducationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditLangActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditHighlightActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.editprofiel.EditIntroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.savedMultimedia.DocsList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.savedMultimedia.ImagesList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.savedMultimedia.VideosList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.savedMultimedia.AudioList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.groupdetails.RemoveParticipants"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.individualChat.IndividualChatDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.groupdetails.AddParticipant"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.groupdetails.BlockedGroupUsers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.groupdetails.ViewSavedMultimedia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.groupdetails.GroupDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.update.GroupChatDetailsActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".InviteFriend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".notification.NotificationListing"
+            android:label="@string/title_activity_notification_listing"
+            android:screenOrientation="portrait" />
+        <!--
+           <activity android:name=".Profile.DummyActivity">
+        </activity>
+        -->
+        <activity
+            android:name=".UniversitiesListing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChangeChatWallpaper"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ListAllFiles"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ViewChatMultimedia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Feedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".brands.AllBrandSettings"
+            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".brands.RelatedOffersViewAll"-->
+<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".brands.ViewAllBrands"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AppDrawer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".home.AddPost"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".profile.EditProfile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name="com.anilokcun.uwmediapicker.ui.activity.UwMediaPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".profile.MyProfile2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".home.Like"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- Facebook -->
+        <activity
+            android:name=".chat.RequestReceivedList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".chat.Chat"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".chat.ChatUsersList"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".chat.ChatListing"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+<!--        <activity-->
+<!--            android:name=".brands.OnlineRedeemedCoupons"-->
+<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".home.Comment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.EditAccount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".blogs.RedeemedCoupons"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".brands.BrandSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chat.ChatSetting"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".blogs.BlogDetails" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.MyProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Startup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".brands.SavedBrandsCoupans"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".blogs.Blog"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+<!--        <activity-->
+<!--            android:name=".chat.ChatGroupsList"-->
+<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".blogs.AllBlogSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".blogs.SharedBlog"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Faq.Faq"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.CompleteProfile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".chat.BlockedUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".SignUp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".home.Home"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- http://www.unilife.com/unilife/post-details/96 -->
+
+                <data
+                    android:host="www.Unilifeapp.com"
+                    android:pathPrefix="/unilife/post-details"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FrogetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".blogs.BlogSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".blogs.SavedBlogCoupans"
+            android:screenOrientation="portrait" />
+<!--        <activity-->
+<!--            android:name=".brands.RevelRedeemedCoupons"-->
+<!--            android:screenOrientation="portrait" />-->
+<!--        <activity-->
+<!--            android:name=".chat.RequstRecieve"-->
+<!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".brands.BrandOffers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".brands.NewlyAddedOffers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".blogs.LatestBlog"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.FullViewMedia"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".blogs.SearchResult"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".blogs.ViewAllCategories"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+<!--        <activity-->
+<!--            android:name=".brands.TrendingOffers"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustResize" />-->
+        <activity
+            android:name=".blogs.ViewAllBlogs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+<!--        <activity-->
+<!--            android:name=".brands.BrandDetailsActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustResize" />-->
+        <activity
+            android:name=".chat.FullMediaScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".home.ShowOtherProfile" />
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".chat.GroupListing"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".chat.CreateGroup"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".chat.GroupDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".brands.BrandDetailsNew" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/app_logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+    </application>
+
+</manifest>

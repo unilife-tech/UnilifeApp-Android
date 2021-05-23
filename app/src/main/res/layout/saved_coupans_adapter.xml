@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_100"
+                    android:layout_above="@+id/tvTitle"
+                    android:layout_margin="@dimen/margin_2"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/coupaon2"/>
+
+
+        </RelativeLayout>
+
+
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_width="match_parent"
+            android:text="Coupan Name"
+            android:textSize="@dimen/margin_15"
+            android:textColor="@color/medium_black"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_15"
+            android:layout_marginEnd="@dimen/margin_15"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_10">
+
+            <unilife.com.unilife.utils.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_blue_cornor"
+                    android:text="View Online"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:paddingStart="@dimen/margin_20"
+                    android:paddingEnd="@dimen/margin_20"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5"
+            />
+
+
+
+
+
+
+        <unilife.com.unilife.utils.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/border_blue_cornor"
+                android:text="View Instore"
+                android:textColor="@color/white"
+                android:paddingStart="@dimen/margin_20"
+                android:paddingEnd="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+               />
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

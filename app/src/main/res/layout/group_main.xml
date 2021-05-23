@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_grey"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <include
+                android:id="@+id/rlTool"
+                layout="@layout/back_icon_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize" />
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rlTool"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                    android:id="@+id/llSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="start|center"
+                    android:orientation="vertical"
+
+                    android:padding="@dimen/margin_8">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_marginRight="@dimen/margin_8"
+                        android:layout_marginBottom="@dimen/margin_5"
+                        android:background="@drawable/radius_white"
+                        android:gravity="start|center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_6">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:gravity="start|center"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:layout_width="@dimen/margin_18"
+                                android:layout_height="@dimen/margin_18"
+                                android:background="@drawable/search"
+                                android:backgroundTint="@color/dark_grey" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:gravity="start|center"
+
+                            android:orientation="vertical">
+
+
+                        <EditText
+                                android:id="@+id/etSearchGrpName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="Search Here"
+                                android:singleLine="true"
+                                android:textColor="@color/dark_grey"
+                                android:textColorHint="@color/dark_grey"
+                                android:textSize="@dimen/margin_12"
+                                android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_12"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_12">
+
+                <unilife.com.unilife.utils.RegularTextView
+                        android:id="@+id/tvCreateNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/border_blue_cornor"
+                        android:paddingStart="@dimen/margin_20"
+                        android:paddingTop="@dimen/margin_8"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_8"
+                        android:text="Create New"
+                        android:textColor="@color/white" />
+
+                <unilife.com.unilife.utils.RegularTextView
+                        android:id="@+id/tvFriend_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/margin_5"
+                        android:paddingTop="@dimen/margin_8"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_8"
+                        android:text="List of Group"
+                        android:textColor="@color/colorPrimary" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:background="@color/white"
+
+                    >
+
+
+                    <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rvList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:paddingStart="@dimen/margin_18" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

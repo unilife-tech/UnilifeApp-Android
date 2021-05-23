@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/group_grey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAudio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAudio"
+            android:layout_width="@dimen/margin_80"
+            android:layout_height="@dimen/margin_80"
+            android:src="@drawable/audio"
+            android:padding="@dimen/dp10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAudioName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:singleLine="true"
+            android:text="Audio.m4a"
+            android:textColor="@color/medium_black"
+            android:textSize="@dimen/margin_14"
+            app:layout_constraintBottom_toBottomOf="@id/ivAudio"
+            app:layout_constraintEnd_toStartOf="@id/cbSelectAudio"
+            app:layout_constraintStart_toEndOf="@id/ivAudio"
+            app:layout_constraintTop_toTopOf="@id/ivAudio" />
+
+        <CheckBox
+            android:id="@+id/cbSelectAudio"
+            android:layout_width="wrap_content"
+            android:button="@drawable/check_box_selector"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp10"
+            app:layout_constraintBottom_toBottomOf="@id/tvAudioName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAudioName"
+            app:layout_constraintTop_toTopOf="@id/tvAudioName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

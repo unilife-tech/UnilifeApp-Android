@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/Rltop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/splash3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/ivback_arrow"
+                    android:layout_width="@dimen/margin_12"
+                    android:layout_height="@dimen/margin_18"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginTop="@dimen/margin_35"
+                    android:background="@drawable/ic_back_arrow"
+                    android:backgroundTint="@color/white"
+                    android:paddingBottom="@dimen/margin_15" />
+
+
+                <unilife.com.unilife.utils.RegularTextView
+                        android:id="@+id/tv_myaccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginTop="@dimen/margin_28"
+                    android:paddingBottom="@dimen/margin_15"
+                    android:text="My Account"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_25" />
+
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:layout_marginStart="@dimen/margin_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:src="@drawable/user"
+                app:layout_constraintTop_toBottomOf="@+id/Rltop" />
+
+
+            <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="@dimen/margin_25"
+                    android:layout_height="@dimen/margin_25"
+                    android:contentDescription="@null"
+                    android:src="@drawable/pencil"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@id/tvname_mp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.62"
+                    app:layout_constraintStart_toStartOf="parent">
+
+            </ImageView>
+
+            <unilife.com.unilife.utils.RegularTextView
+                android:id="@+id/tvname_mp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Usman Abubakar"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/margin_25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfileImg" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clselectView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvname_mp"
+                    app:layout_constraintStart_toStartOf="parent"
+                >
+
+
+<!--
+            <unilife.com.unilife.Utils.RegularTextView
+                android:id="@+id/tvstudy1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="BBA Entreprneurship managment major"
+                android:textColor="@color/medium_black"
+                android:textSize="@dimen/margin_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/clselectView"
+            />-->
+
+            <unilife.com.unilife.utils.RegularTextView
+                android:id="@+id/tvstudy2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Student University of Dubai"
+                android:textColor="@color/medium_black"
+                android:textSize="@dimen/margin_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/clselectView" />
+
+            <unilife.com.unilife.utils.RegularTextView
+                android:id="@+id/bio_mp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="Bio"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/margin_25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvstudy2" />
+
+            <unilife.com.unilife.utils.RegularTextView
+                android:id="@+id/tv_showbio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:text="Lorem Ipsum praim "
+                android:textSize="@dimen/margin_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bio_mp"
+
+                />
+
+                <unilife.com.unilife.utils.RegularTextView
+                android:id="@+id/tv_LoggedInAs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_20"
+                android:paddingRight="@dimen/margin_20"
+                android:text="Logged in as"
+                android:textSize="@dimen/margin_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_showbio"
+
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_roundicons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_10"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/tv_LoggedInAs"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+           <!-- app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_profileques"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_roundicons"
+
+                />
+
+            <ImageView
+                android:id="@+id/iv_hobbies"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:src="@drawable/no_image"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_profileques"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_hobbies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="Hobbies"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/margin_18"
+                app:layout_constraintStart_toEndOf="@id/iv_hobbies"
+                app:layout_constraintTop_toBottomOf="@id/rv_profileques"
+
+
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_Hobbies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_10"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hobbies"
+
+                />
+
+
+            <ImageView
+                android:id="@+id/iv_interest"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:src="@drawable/no_image"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_Hobbies"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:text="Interests"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/margin_18"
+                app:layout_constraintStart_toEndOf="@id/iv_interest"
+                app:layout_constraintTop_toBottomOf="@id/rv_Hobbies" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_Interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_10"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_interest" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

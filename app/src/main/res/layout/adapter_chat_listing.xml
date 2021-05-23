@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/default_profile"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/robotoregular"
+        android:maxLines="1"
+        android:text="Charliz Theron"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txtTime"
+        app:layout_constraintStart_toEndOf="@+id/imgProfile"
+        app:layout_constraintTop_toTopOf="@+id/imgProfile" />
+
+    <TextView
+        android:id="@+id/txtLastMsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_2sdp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:drawablePadding="@dimen/_1sdp"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/robotoregular"
+        android:maxLines="1"
+        android:text="Jog Falls is a waterfall on the Sharavati river located in the Western Ghats in Siddapur taluk Uttara Kannada District"
+        android:textColor="@color/medium_grey"
+        android:drawableTint="@color/medium_grey"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/robotoregular"
+        android:maxLines="1"
+        android:text="13:00"
+        android:textColor="@color/vdark_grey"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtName" />
+
+    <LinearLayout
+        android:id="@+id/llUnseenMsgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.7"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLastMsg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName">
+
+        <unilife.com.unilife.utils.RegularTextView
+            android:id="@+id/tvUnseenMsgsCount"
+            android:layout_width="@dimen/margin_28"
+            android:layout_height="@dimen/margin_28"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_10" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tLine"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="8dp"
+        android:background="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

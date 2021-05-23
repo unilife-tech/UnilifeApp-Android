@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".brands.BranchReceiptActivity">
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_chevron_left_black_24dp"
+        android:drawableTint="@color/black"
+        android:elevation="@dimen/_4sdp"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center|center_vertical"
+        android:onClick="goBack"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:text="Burger wings"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/light_grey"
+        android:padding="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHeader">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:text="Enter Receipt Number"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtReceipt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/back_edittext_redeem"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="@+id/txt1"
+            app:layout_constraintStart_toStartOf="@+id/txt1"
+            app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Enter Branch (Name/Location)"
+            android:textSize="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="@+id/txt1"
+            app:layout_constraintStart_toStartOf="@+id/txt1"
+            app:layout_constraintTop_toBottomOf="@+id/edtReceipt" />
+
+        <EditText
+            android:id="@+id/edtBranch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/back_edittext_redeem"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="@+id/txt1"
+            app:layout_constraintStart_toStartOf="@+id/txt1"
+            app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border_blue_cornor"
+            android:onClick="callNext"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@+id/txt1"
+            app:layout_constraintStart_toStartOf="@+id/txt1"
+            app:layout_constraintTop_toBottomOf="@+id/edtBranch" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

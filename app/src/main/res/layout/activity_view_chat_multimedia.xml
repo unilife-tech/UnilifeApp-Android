@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".chat.ViewChatMultimedia">
+
+    <include
+        layout="@layout/back_icon_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/rlTool"
+    />
+
+        <LinearLayout
+                app:layout_constraintTop_toBottomOf="@id/rlTool"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+            <LinearLayout
+                    android:id="@+id/llAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+            >
+
+                <unilife.com.unilife.utils.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:text="Audio"
+                        android:textColor="@color/medium_black"
+                        android:textSize="@dimen/margin_20"
+                />
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginLeft="@dimen/margin_15"
+                      android:layout_marginTop="@dimen/margin_10"
+                      android:layout_marginRight="@dimen/margin_15"
+                      android:background="@color/light_grey"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/llVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+            >
+
+                <unilife.com.unilife.utils.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:text="Video"
+                        android:textColor="@color/medium_black"
+                        android:textSize="@dimen/margin_20"
+                />
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginLeft="@dimen/margin_15"
+                      android:layout_marginTop="@dimen/margin_10"
+                      android:layout_marginRight="@dimen/margin_15"
+                      android:background="@color/light_grey"
+                />
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/llImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+            >
+
+                <unilife.com.unilife.utils.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:text="Image"
+                        android:textColor="@color/medium_black"
+                        android:textSize="@dimen/margin_20"
+                />
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginLeft="@dimen/margin_15"
+                      android:layout_marginTop="@dimen/margin_10"
+                      android:layout_marginRight="@dimen/margin_15"
+                      android:background="@color/light_grey"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llDocument"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+            >
+
+
+                <unilife.com.unilife.utils.RegularTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:text="Document"
+                        android:textColor="@color/medium_black"
+                        android:textSize="@dimen/margin_20"
+                />
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginLeft="@dimen/margin_15"
+                      android:layout_marginTop="@dimen/margin_10"
+                      android:layout_marginRight="@dimen/margin_15"
+                      android:background="@color/light_grey"
+                />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

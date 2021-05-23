@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_6"
+    tools:context=".login.BirthdayActivity">
+
+    <TextView
+        android:id="@+id/txtHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="When is your birthday"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edtBirtday"
+        app:layout_constraintEnd_toEndOf="@+id/edtBirtday"
+        app:layout_constraintStart_toStartOf="@+id/edtBirtday" />
+
+    <EditText
+        android:id="@+id/edtBirtday"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/back_edittext_login"
+        android:focusable="false"
+        android:onClick="selectDate"
+        android:hint="Select birth date"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <TextView
+        android:id="@+id/txtNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="callNext"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtHeader"
+        app:layout_constraintStart_toStartOf="@+id/txtHeader"
+        app:layout_constraintTop_toBottomOf="@+id/edtBirtday" />
+
+    <ImageView
+        android:id="@+id/imgTop"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/ic_event_note_black_24dp"
+        android:tint="@color/white"
+        android:onClick="selectDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

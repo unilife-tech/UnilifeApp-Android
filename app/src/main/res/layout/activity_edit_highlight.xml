@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.editprofiel.EditHighlightActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/robotoregular"
+                android:gravity="center"
+                android:text="Highlights"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_school_24px"
+                android:drawablePadding="@dimen/_4sdp"
+                android:text="Currently working at"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/edit1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edit1" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_school_24px"
+                android:drawablePadding="@dimen/_4sdp"
+                android:text="Currently studying at"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/edit2"
+                app:layout_constraintStart_toStartOf="@+id/text1"
+                app:layout_constraintTop_toTopOf="@+id/edit2" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_school_24px"
+                android:drawablePadding="@dimen/_4sdp"
+                android:text="Graduated from"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/edit3"
+                app:layout_constraintStart_toStartOf="@+id/text1"
+                app:layout_constraintTop_toTopOf="@+id/edit3" />
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_school_24px"
+                android:drawablePadding="@dimen/_4sdp"
+                android:text="Completed High-school at"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/edit4"
+                app:layout_constraintStart_toStartOf="@+id/text1"
+                app:layout_constraintTop_toTopOf="@+id/edit4" />
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_place_24px"
+                android:drawablePadding="@dimen/_4sdp"
+                android:text="Lives in"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/edit5"
+                app:layout_constraintStart_toStartOf="@+id/text1"
+                app:layout_constraintTop_toTopOf="@+id/edit5" />
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_place_24px"
+                android:drawablePadding="@dimen/_4sdp"
+                android:text="From"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/edit6"
+                app:layout_constraintStart_toStartOf="@+id/text5"
+                app:layout_constraintTop_toTopOf="@+id/edit6" />
+
+            <EditText
+                android:id="@+id/edit1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/text1"
+                app:layout_constraintTop_toBottomOf="@+id/text"
+                tools:text="" />
+
+            <EditText
+                android:id="@+id/edit2"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text=""
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="@+id/edit1"
+                app:layout_constraintStart_toEndOf="@+id/text2"
+                app:layout_constraintTop_toBottomOf="@+id/edit1" />
+
+            <EditText
+                android:id="@+id/edit3"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="@+id/edit2"
+                app:layout_constraintStart_toEndOf="@+id/text3"
+                app:layout_constraintTop_toBottomOf="@+id/edit2"
+                tools:text="" />
+
+            <EditText
+                android:id="@+id/edit4"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="@+id/edit3"
+                app:layout_constraintStart_toEndOf="@+id/text4"
+                app:layout_constraintTop_toBottomOf="@+id/edit3"
+                tools:text="" />
+
+            <EditText
+                android:id="@+id/edit5"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="@+id/edit4"
+                app:layout_constraintStart_toEndOf="@+id/text5"
+                app:layout_constraintTop_toBottomOf="@+id/edit4"
+                tools:text="" />
+
+            <EditText
+                android:id="@+id/edit6"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintEnd_toEndOf="@+id/edit5"
+                app:layout_constraintStart_toEndOf="@+id/text6"
+                app:layout_constraintTop_toBottomOf="@+id/edit5"
+                tools:text="" />
+
+            <ImageView
+                android:id="@+id/imbBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="goBack"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_chevron_left_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/back_button_fill"
+        android:text="Update"
+        android:onClick="callService"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

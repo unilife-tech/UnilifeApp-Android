@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llToolBar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5">
+
+
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="@dimen/margin_30"
+            android:layout_centerVertical="true"
+            android:background="@drawable/arrow_left" />
+
+
+        <unilife.com.unilife.utils.RegularTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_22"
+            android:typeface="monospace" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileImg"
+            android:layout_width="@dimen/margin_25"
+            android:layout_height="@dimen/margin_25"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_toLeftOf="@+id/tvTitle"
+            android:src="@drawable/no_image"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="@dimen/margin_25"
+            android:layout_height="@dimen/margin_25"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/notifications"
+            android:backgroundTint="@color/white" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

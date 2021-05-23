@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:visibility="gone"
+        tools:context=".blogs.AllBlogSettings">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/colorPrimary"
+                  android:orientation="vertical">
+
+
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_35"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/margin_15"
+                android:background="@color/colorPrimary">
+
+            <ImageView
+                    android:id="@+id/ivbackArrow"
+                    android:layout_width="@dimen/margin_12"
+                    android:layout_height="@dimen/margin_18"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:background="@drawable/ic_back_arrow"
+                    android:backgroundTint="@color/white"
+            />
+
+            <unilife.com.unilife.utils.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brand Offers"
+                    android:textSize="@dimen/margin_20"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+            />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/rycOffers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_60"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_20">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+
+
+
+    <include
+            android:id="@+id/bottomLayout"
+            layout="@layout/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+    />
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InviteFriend">
+
+
+
+    <TextView
+        android:id="@+id/tvShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/share_with_friends"
+        android:layout_marginTop="@dimen/margin_50"
+        android:textSize="@dimen/margin_25"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvShare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/inviteimg"
+        android:paddingStart="@dimen/margin_30"
+        android:paddingEnd="@dimen/margin_30"
+        android:textStyle="bold"
+        android:text="@string/play_store_link"
+        android:textSize="@dimen/margin_16"
+        android:gravity="center"
+        android:textColor="@color/dark_green"
+
+        />
+    <ImageView
+        android:id="@+id/inviteimg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/margin_300"
+        android:layout_height="@dimen/margin_300"
+        android:background="@drawable/inviteimage"
+        />
+
+    <unilife.com.unilife.utils.RegularTextView
+        android:id="@+id/btnInvite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/margin_50"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_50"
+        android:paddingBottom="@dimen/margin_10"
+        android:text="@string/invite"
+        android:textColor="@color/white"
+        android:textSize="@dimen/margin_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/inviteimg" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

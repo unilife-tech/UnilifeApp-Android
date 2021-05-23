@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".updated.PollActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Poll"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="Post"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:onClick="callService"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text" />
+
+    <ImageView
+        android:id="@+id/imbBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="closeView"
+        android:padding="@dimen/_10sdp"
+        android:tint="@color/medium_red"
+        android:src="@drawable/ic_close_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_48sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_56sdp"
+                android:src="@drawable/default_profile"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="@dimen/_2sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/robotoregular"
+                android:text="Charliz Theron"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imgProfile"
+                app:layout_constraintTop_toTopOf="@+id/imgProfile" />
+
+            <EditText
+                android:id="@+id/edtQue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/back_edittext"
+                android:hint="Ask a question"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/imgClose"
+                app:layout_constraintStart_toStartOf="@+id/edtQue"
+                app:layout_constraintTop_toBottomOf="@+id/edtQue">
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/edtOption1"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="42dp"-->
+                <!--                    android:background="@drawable/back_edittext"-->
+                <!--                    android:hint="Option 1"-->
+                <!--                    android:padding="@dimen/_8sdp" />-->
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/edtOption2"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="16dp"-->
+                <!--                    android:background="@drawable/back_edittext"-->
+                <!--                    android:hint="Option 2"-->
+                <!--                    android:padding="@dimen/_8sdp" />-->
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:onClick="removeEditText"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_cancel_black_24dp"
+                android:tint="@color/medium_red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/line1" />
+
+            <ImageView
+                android:id="@+id/imgAdd"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_add_black_24dp"
+                android:tint="@color/dark_grey"
+                app:layout_constraintBottom_toBottomOf="@+id/line1"
+                app:layout_constraintStart_toStartOf="@+id/imgClose" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

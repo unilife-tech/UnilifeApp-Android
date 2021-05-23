@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_marginStart="@dimen/_45sdp"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:background="@drawable/bg_msg_to"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSenderNameOG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="Rajesh Krishan"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clReplayOG"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@color/light_grey"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/vline"
+                android:layout_width="@dimen/_2sdp"
+                android:layout_height="0sp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/txtSenderNameReplayOG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/_4sdp"
+                android:text="Sender Name"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imgReplayOG"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMessageReplayOG"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="@dimen/_4sdp"
+                android:text="Message which is swapped"
+                android:textColor="@color/medium_grey"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="@+id/txtSenderNameReplayOG"
+                app:layout_constraintTop_toBottomOf="@+id/txtSenderNameReplayOG" />
+
+            <ImageView
+                android:id="@+id/imgReplayOG"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="0sp"
+                android:src="@drawable/default_image"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/vline"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/constraintMainOG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSenderNameOG"
+            android:layout_alignStart="@+id/txtSenderNameOG"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/_4sdp">
+
+            <TextView
+                android:id="@+id/txtMessageOG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:gravity="start"
+                android:text="Hi I got a problem with the RelativeLayout. The idea is to define a title bar in the XML code on top of the screen and then add a textview element BELOW "
+                android:textColor="@color/vdark_grey"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgChatsOG"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/default_profile"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgVideoOG"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/ic_play_circle_outline_black_24dp"
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/imgChatsOG"
+                app:layout_constraintEnd_toEndOf="@+id/imgChatsOG"
+                app:layout_constraintStart_toStartOf="@+id/imgChatsOG"
+                app:layout_constraintTop_toTopOf="@+id/imgChatsOG" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintAudioOG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfileAudioOG"
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/default_profile"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_1sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgAudioOG"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:background="@drawable/circle_background"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_baseline_mic_24"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/playAudioOG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_play_arrow_24"
+                    android:tint="@color/dark_grey"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintStart_toEndOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudioOG" />
+
+                <ImageView
+                    android:id="@+id/pauseAudioOG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_pause_24"
+                    android:tint="@color/dark_grey"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintStart_toEndOf="@+id/imgProfileAudioOG"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfileAudioOG" />
+
+                <SeekBar
+                    android:id="@+id/seekbarOG"
+                    android:layout_width="@dimen/_148sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playAudioOG"
+                    app:layout_constraintEnd_toStartOf="@+id/txtAudioDurationOG"
+                    app:layout_constraintStart_toEndOf="@+id/playAudioOG"
+                    app:layout_constraintTop_toTopOf="@+id/playAudioOG" />
+
+                <TextView
+                    android:id="@+id/txtAudioDurationOG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="end"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:text="-:-"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playAudioOG"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playAudioOG" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--            <androidx.constraintlayout.widget.Barrier-->
+            <!--                android:id="@+id/barrierOG"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:barrierDirection="bottom"-->
+            <!--                app:constraint_referenced_ids="txtMessageOG,imgChatsOG,constraintAudioOG" />-->
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtTimeOG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/constraintMainOG"
+            android:layout_alignEnd="@+id/constraintMainOG"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="12:15"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/_9sdp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_4sdp"
+        android:layout_gravity="end"
+        android:padding="0sp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        android:tint="#dcf4fe" />
+
+</FrameLayout>

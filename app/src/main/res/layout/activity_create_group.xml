@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_grey">
+
+    <include
+            android:id="@+id/rlTool"
+            layout="@layout/back_icon_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize" />
+
+    <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTool"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+                android:id="@+id/llImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivGroupImg"
+                    android:layout_width="@dimen/margin_80"
+                    android:layout_height="@dimen/margin_80"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:src="@drawable/no_image"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="@dimen/margin_1" />
+
+
+            <EditText
+                    android:id="@+id/etGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:background="@null"
+                    android:hint="Enter Group Name.. "
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="@dimen/margin_14" />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:background="@color/medium_grey" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_12"
+                android:orientation="horizontal"
+                android:layout_below="@+id/llImg"
+                android:weightSum="2">
+
+
+            <unilife.com.unilife.utils.RegularTextView
+                    android:id="@+id/tvFriend_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_weight="1.4"
+                    android:background="@drawable/border_blue_cornor"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingEnd="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:text="Friends List"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/radius_white_border"
+                    android:gravity="start|center"
+
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_6">
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:gravity="start|center"
+                        android:orientation="vertical">
+
+                    <ImageView
+                            android:layout_width="@dimen/margin_18"
+                            android:layout_height="@dimen/margin_18"
+                            android:background="@drawable/search"
+                            android:backgroundTint="@color/dark_grey" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start|center"
+                        android:orientation="vertical">
+
+
+                    <EditText
+                            android:id="@+id/etSearch1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Search by name"
+                            android:singleLine="true"
+                            android:textColor="@color/dark_grey"
+                            android:textColorHint="@color/dark_grey"
+                            android:textSize="@dimen/margin_14"
+                            android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvCreateGrouplist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_above="@+id/tvCreateGrp"
+            android:layout_below="@+id/rlContent"
+            android:layout_marginRight="@dimen/margin_12" />
+
+    <unilife.com.unilife.utils.RegularTextView
+            android:id="@+id/tvCreateGrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/border_blue_cornor"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="@dimen/margin_14"
+            android:paddingTop="@dimen/margin_8"
+            android:paddingEnd="@dimen/margin_14"
+            android:paddingBottom="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_alignParentBottom="true"
+            android:text="Create Group"
+            android:textColor="@color/white" />
+
+</RelativeLayout>

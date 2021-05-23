@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@drawable/splash2"
+
+        android:layout_height="match_parent">
+
+
+        <ImageView
+                android:id="@+id/yyy"
+                android:layout_width="@dimen/margin_14"
+                android:layout_height="@dimen/margin_20"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_40"
+                android:background="@drawable/ic_back_arrow"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Feedback"
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/margin_30"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView
+                    android:layout_width="@dimen/margin_200"
+                    android:layout_height="@dimen/margin_200"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ratingsimage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/margin_200"
+            />
+
+            <RatingBar
+                    android:id="@+id/feedratings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:progressTint="@color/golden"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/margin_100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+
+            <unilife.com.unilife.utils.RegularTextView
+                    android:id="@+id/tvreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/feedratings"
+                    android:layout_marginTop="@dimen/margin_50"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="Write your feedback ..."
+                    android:textSize="@dimen/margin_20"
+
+            />
+
+            <EditText
+                    android:id="@+id/etfeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvreview"
+                    android:maxLines="3"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_20"
+            />
+
+
+            <unilife.com.unilife.utils.RegularTextView
+
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Submit"
+                    android:textSize="@dimen/margin_20"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/etfeedback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/button_border"
+                    android:paddingStart="@dimen/margin_40"
+                    android:paddingEnd="@dimen/margin_40"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:layout_height="wrap_content"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

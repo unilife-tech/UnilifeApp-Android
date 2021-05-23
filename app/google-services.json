@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "690334160797",
+    "firebase_url": "https://unilife-1016c.firebaseio.com",
+    "project_id": "unilife-1016c",
+    "storage_bucket": "unilife-1016c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690334160797:android:d14c1093532ddb50850174",
+        "android_client_info": {
+          "package_name": "unilife.com.unilife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690334160797-mo0dqe4s1cgp7bjdvcrlup4gfs8pj8g7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWHkRuZ-3yk5icSlDavoS4401WrsGKJUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690334160797-mo0dqe4s1cgp7bjdvcrlup4gfs8pj8g7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "690334160797-bk237tv1bdgfe1jmuvmffkg4gqc5m5hb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.softech.fzco.Unilife"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grey_outline"
+        android:layout_margin="@dimen/margin_10"
+        android:padding="@dimen/margin_6"
+        android:orientation="vertical">
+
+
+
+    <unilife.com.unilife.utils.RegularTextView
+            android:id="@+id/tvBlockUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/margin_8"
+            android:text="Block User"
+            android:textSize="@dimen/margin_12"
+
+            />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@color/Olgrey" />
+
+
+
+
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <unilife.com.unilife.utils.RegularTextView
+                android:id="@+id/tvChangeMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/margin_8"
+                android:text="Change Mode"
+                android:textSize="@dimen/margin_12"
+                android:layout_centerVertical="true"
+
+                />
+
+
+        <Switch
+                android:id="@+id/SwChangeMode1"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="@dimen/margin_20"
+                android:layout_centerVertical="true"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_toRightOf="@+id/tvChangeMode"
+                android:theme="@style/SwitchTheme" />
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

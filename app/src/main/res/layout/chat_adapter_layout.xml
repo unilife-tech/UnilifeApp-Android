@@ -1,0 +1,1252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tvHeaderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_40"
+        android:background="@drawable/date_bg"
+        android:paddingLeft="@dimen/margin_8"
+        android:paddingTop="@dimen/margin_2"
+        android:paddingRight="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_2"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/margin_12"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeaderDate">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clMyMessageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginEnd="@dimen/margin_15"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSender"
+                android:layout_width="@dimen/margin_200"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_drawable_sender"
+                android:paddingTop="@dimen/margin_2"
+                android:paddingBottom="@dimen/margin_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvMainName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:text="Sender Name"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/margin_12"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@+id/civMyImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--
+                                    app:layout_constraintStart_toStartOf="parent"
+
+                            app:layout_constraintEnd_toStartOf="@+id/civMyImage"
+                -->
+
+                <LinearLayout
+                    android:id="@+id/llOnRepliedMessageSender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:background="@color/replyBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/margin_2"
+                    android:paddingBottom="@dimen/margin_2"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/civMyImage">
+
+
+                    <TextView
+                        android:id="@+id/tvOnRepliedMessageSender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:gravity="end|center"
+                        android:paddingTop="@dimen/margin_2"
+                        android:paddingRight="@dimen/margin_5"
+                        android:paddingBottom="@dimen/margin_2"
+                        android:text="dfgdfgdf dfgdff"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/margin_14" />
+
+                    <LinearLayout
+                        android:id="@+id/llOnRepliedSenderMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_2"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ivOnRepliedSenderMedia"
+                            android:layout_width="@dimen/margin_40"
+                            android:layout_height="@dimen/margin_40"
+                            android:layout_gravity="end"
+                            android:src="@drawable/no_image" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvMyMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:gravity="start|center"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_5"
+                    android:text="dgvdfbgdfgfgdfgfgfdgdvnbvnvbnvbfgfgfhg vbvbvnvdfgdfgdfbvnbvnbvng dfgdfgdf dfgdff"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/margin_14"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/tvChatMyTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llOnRepliedMessageSender"
+
+                    />
+
+                <!--  app:layout_constraintBottom_toTopOf="@+id/tvChatMyTime"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/civMyImage"-->
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civMyImage"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:paddingLeft="@dimen/margin_2"
+                    android:paddingRight="@dimen/margin_2"
+                    android:src="@drawable/no_image"
+                    android:visibility="gone"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="@dimen/margin_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.jcminarro.roundkornerlayout.RoundKornerLinearLayout
+                    android:id="@+id/llPlayChatVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorPrimary"
+                    android:elevation="@dimen/dp10"
+                    android:padding="@dimen/margin_5"
+                    android:visibility="gone"
+                    app:corner_radius="@dimen/margin_20"
+                    app:layout_constraintBottom_toBottomOf="@+id/llMyImage"
+                    app:layout_constraintEnd_toEndOf="@+id/llMyImage"
+                    app:layout_constraintStart_toStartOf="@+id/llMyImage"
+                    app:layout_constraintTop_toTopOf="@+id/llMyImage">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_20"
+                        android:layout_height="@dimen/margin_20"
+                        android:src="@drawable/play_button"
+                        android:tint="@color/white" />
+
+                </com.jcminarro.roundkornerlayout.RoundKornerLinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMyImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_5"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/tvChatMyTime"
+                    app:layout_constraintTop_toBottomOf="@+id/llOnRepliedMessageSender">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivMyChatImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="@dimen/margin_150"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/no_image"
+                        app:layout_constraintHeight_max="@dimen/margin_150"
+                        app:riv_corner_radius="@dimen/margin_5" />
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/clMyAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_5"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/tvChatMyTime"
+                    app:layout_constraintTop_toBottomOf="@+id/llOnRepliedMessageSender">
+
+                    <RelativeLayout
+                        android:id="@+id/llPlayMyAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivPlayMyAudio"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:background="@drawable/play_button"
+                            android:backgroundTint="@color/white" />
+
+                        <ImageView
+                            android:id="@+id/ivStopMyAudio"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:background="@drawable/exomedia_ic_pause_white"
+                            android:backgroundTint="@color/white"
+                            android:elevation="@dimen/margin_2"
+                            android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_2"
+                        android:layout_toLeftOf="@id/ivMic"
+                        android:layout_toRightOf="@id/llPlayMyAudio"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <SeekBar
+                            android:id="@+id/seekbarMyAudio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progressBackgroundTint="@color/white"
+                            android:progressBackgroundTintMode="multiply"
+                            android:progressTint="@color/white"
+                            android:secondaryProgressTint="@color/white"
+                            android:thumb="@drawable/circle"
+                            android:thumbTint="@color/white"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/tvRSideAudioTimer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dp5"
+                            android:paddingBottom="@dimen/margin_2"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/margin_8"
+                            app:layout_constraintStart_toStartOf="@id/seekbarMyAudio"
+                            app:layout_constraintTop_toBottomOf="@id/seekbarMyAudio" />
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/ivMic"
+                        android:layout_width="@dimen/margin_18"
+                        android:layout_height="@dimen/margin_25"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp5"
+                        android:background="@drawable/miceee"
+                        android:backgroundTint="@color/white"
+
+                        />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvChatMyTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_5"
+                    android:text="02:05"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/margin_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSecondUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_15"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clReceiver"
+                android:layout_width="@dimen/margin_200"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_drawable_receiver"
+                android:paddingTop="@dimen/margin_2"
+                android:paddingBottom="@dimen/margin_2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvRecMainName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="Receiver Name"
+                    android:textColor="@color/chat_rec_color"
+                    android:textSize="@dimen/margin_12"
+                    app:layout_constraintBottom_toBottomOf="@id/civSecondPerson"
+                    app:layout_constraintStart_toEndOf="@+id/civSecondPerson"
+                    app:layout_constraintTop_toTopOf="@id/civSecondPerson" />
+
+                <LinearLayout
+                    android:id="@+id/llOnRepliedMessageReceiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/replyBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/margin_2"
+                    android:paddingBottom="@dimen/margin_2"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/civSecondPerson">
+
+                    <LinearLayout
+                        android:id="@+id/llOnRepliedReceiverMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_2"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/ivOnRepliedReceiverMedia"
+                            android:layout_width="@dimen/margin_40"
+                            android:layout_height="@dimen/margin_40"
+                            android:layout_gravity="start"
+                            android:src="@drawable/no_image" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvOnRepliedMessageReceiver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:background="@color/replyBackground"
+                        android:gravity="start|center"
+                        android:paddingLeft="@dimen/margin_5"
+                        android:paddingTop="@dimen/margin_2"
+                        android:paddingBottom="@dimen/margin_2"
+                        android:text="  dfgdfgdf dfgdff"
+                        android:textColor="@color/chat_rec_color"
+                        android:textSize="@dimen/margin_14" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSecondPersonMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:gravity="start|center"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_5"
+                    android:text="dgvdfbgdfgfgdfgfgfdgdvnbvnvbnvbfgfgfhg vbvbvnvdfgdfgdfbvnbvnbvng dfgdfgdf dfgdff"
+                    android:textColor="@color/chat_rec_color"
+                    android:textSize="@dimen/margin_14"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/tvChatSecondPersonTime"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llOnRepliedMessageReceiver" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civSecondPerson"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="2dp"
+                    android:paddingLeft="@dimen/margin_2"
+                    android:paddingRight="@dimen/margin_2"
+                    android:src="@drawable/no_image"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="@dimen/margin_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvChatSecondPersonTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_2"
+                    android:text="02:34"
+                    android:textColor="@color/chat_rec_color"
+                    android:textSize="@dimen/margin_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <!-- Play button -->
+                <com.jcminarro.roundkornerlayout.RoundKornerLinearLayout
+                    android:id="@+id/llPlaySecondChatVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/colorPrimary"
+                    android:elevation="@dimen/dp10"
+                    android:visibility="gone"
+                    app:corner_radius="@dimen/margin_20"
+                    app:layout_constraintBottom_toBottomOf="@+id/llSecondPersonImage"
+                    app:layout_constraintEnd_toEndOf="@+id/llSecondPersonImage"
+                    app:layout_constraintStart_toStartOf="@+id/llSecondPersonImage"
+                    app:layout_constraintTop_toTopOf="@+id/llSecondPersonImage">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_30"
+                        android:layout_height="@dimen/margin_30"
+                        android:src="@drawable/play_button"
+                        android:tint="@color/white" />
+
+                </com.jcminarro.roundkornerlayout.RoundKornerLinearLayout>
+
+
+                <!-- Image and Video -->
+                <LinearLayout
+                    android:id="@+id/llSecondPersonImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_8"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/tvChatSecondPersonTime"
+                    app:layout_constraintTop_toBottomOf="@+id/llOnRepliedMessageReceiver">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/ivChatSecondMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:maxHeight="@dimen/margin_150"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/no_image"
+                        app:layout_constraintHeight_max="@dimen/margin_150"
+                        app:riv_corner_radius="@dimen/margin_5" />
+
+
+                </LinearLayout>
+
+
+                <!-- Audio -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cvSecondPersonAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:paddingLeft="@dimen/margin_5"
+                    android:paddingRight="@dimen/margin_8"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/tvChatSecondPersonTime"
+                    app:layout_constraintTop_toBottomOf="@+id/llOnRepliedMessageReceiver">
+
+                    <ImageView
+                        android:id="@+id/ivLSideMic"
+                        android:layout_width="@dimen/margin_18"
+                        android:layout_height="@dimen/margin_25"
+                        android:layout_marginStart="@dimen/margin_5"
+                        android:background="@drawable/miceee"
+                        android:backgroundTint="#19B5FF"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <SeekBar
+                        android:id="@+id/seekbarYourAudio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp5"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingTop="@dimen/dp10"
+                        android:progressBackgroundTint="@color/dark_grey"
+                        android:progressBackgroundTintMode="multiply"
+                        android:progressTint="#19B5FF"
+                        android:secondaryProgressTint="#19B5FF"
+                        android:thumb="@drawable/circle"
+                        android:thumbTint="#19B5FF"
+                        app:layout_constraintEnd_toStartOf="@id/ivLSideMic"
+                        app:layout_constraintStart_toEndOf="@id/rlPlayLSideAudio"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvLSideAudioTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/dp5"
+                        android:paddingBottom="@dimen/margin_2"
+                        android:text="dfgdfgdfg"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/margin_8"
+                        app:layout_constraintStart_toStartOf="@id/seekbarYourAudio"
+                        app:layout_constraintTop_toBottomOf="@id/seekbarYourAudio" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlPlayLSideAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/ivLSidePlayAudio"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_marginEnd="@dimen/margin_5"
+                            android:src="@drawable/play_button"
+                            android:tint="#19B5FF" />
+
+                        <ImageView
+                            android:id="@+id/ivStopLSideAudio"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:elevation="@dimen/margin_2"
+                            android:src="@drawable/exomedia_ic_pause_white"
+                            android:tint="@color/colorPrimary"
+                            android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+                android:id="@+id/tvHeaderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                android:textSize="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMyMessageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+            <RelativeLayout
+                    android:id="@+id/rlMyMessage"
+                    android:layout_width="@dimen/margin_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_50"
+                    android:layout_marginEnd="@dimen/dp10"
+                    app:layout_constraintEnd_toStartOf="@+id/civMyImage"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.jcminarro.roundkornerlayout.RoundKornerLinearLayout
+                        android:id="@+id/llPlayChatVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@color/colorPrimary"
+                        android:elevation="@dimen/dp10"
+                        android:padding="@dimen/margin_5"
+                        android:visibility="gone"
+                        app:corner_radius="@dimen/margin_20"
+                        app:layout_constraintBottom_toBottomOf="@+id/llMyImage"
+                        app:layout_constraintEnd_toEndOf="@+id/llMyImage"
+                        app:layout_constraintStart_toStartOf="@+id/llMyImage"
+                        app:layout_constraintTop_toTopOf="@+id/llMyImage">
+
+
+                    <ImageView
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
+                            android:src="@drawable/play_button"
+                            android:tint="@color/white" />
+
+                </com.jcminarro.roundkornerlayout.RoundKornerLinearLayout>
+
+                <TextView
+                        android:id="@+id/tvMyMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:background="@drawable/chat_drawable_sender"
+                        android:paddingStart="@dimen/margin_15"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/margin_14"
+                        android:visibility="gone"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                        android:id="@+id/llMyImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tvMyMessage"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/chat_drawable_sender"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp10"
+                        android:visibility="gone">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/ivMyChatImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="@dimen/margin_150"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/no_image"
+                            app:layout_constraintHeight_max="@dimen/margin_150"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvMyMessage"
+                            app:riv_corner_radius="@dimen/margin_10" />
+
+
+                </LinearLayout>
+
+                &lt;!&ndash;
+                &ndash;&gt;
+
+                <RelativeLayout
+                        android:id="@+id/clMyAudio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/chat_drawable_sender"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingBottom="@dimen/margin_2"
+                        android:paddingRight="@dimen/margin_5"
+                        android:visibility="gone">
+
+                    <RelativeLayout
+                            android:id="@+id/llPlayMyAudio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                                android:id="@+id/ivPlayMyAudio"
+                                android:layout_width="@dimen/margin_28"
+                                android:layout_height="@dimen/margin_28"
+                                android:background="@drawable/play_button"
+                                android:backgroundTint="@color/white" />
+
+                        <ImageView
+                                android:id="@+id/ivStopMyAudio"
+                                android:layout_width="@dimen/margin_28"
+                                android:layout_height="@dimen/margin_28"
+                                android:background="@drawable/exomedia_ic_pause_white"
+                                android:backgroundTint="@color/white"
+                                android:elevation="@dimen/margin_2"
+                                android:visibility="gone" />
+
+
+                    </RelativeLayout>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_marginEnd="@dimen/margin_5"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_toRightOf="@id/llPlayMyAudio"
+                            android:layout_toLeftOf="@id/ivMic"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <SeekBar
+                                android:id="@+id/seekbarMyAudio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:progressBackgroundTint="@color/white"
+                                android:progressBackgroundTintMode="multiply"
+                                android:progressTint="@color/white"
+                                android:secondaryProgressTint="@color/white"
+                                android:thumb="@drawable/circle"
+                                android:thumbTint="@color/white"
+
+                                />
+
+                        <TextView
+                                android:id="@+id/tvRSideAudioTimer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="@dimen/dp5"
+                                android:paddingBottom="@dimen/margin_2"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/margin_12"
+                                app:layout_constraintStart_toStartOf="@id/seekbarMyAudio"
+                                app:layout_constraintTop_toBottomOf="@id/seekbarMyAudio" />
+
+
+                    </LinearLayout>
+
+
+
+                    <ImageView
+                            android:id="@+id/ivMic"
+                            android:layout_width="@dimen/margin_18"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:background="@drawable/miceee"
+                            android:backgroundTint="@color/white"
+
+                            />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civMyImage"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:src="@drawable/no_image"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="@dimen/margin_1"
+                    app:layout_constraintBottom_toBottomOf="@id/rlMyMessage"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    />
+
+
+            <ImageView
+                    android:id="@+id/ivEmptyCheck"
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:src="@drawable/ic_group_add_black_24dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvChatMyTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvChatMyTime" />
+
+            <ImageView
+                    android:id="@+id/ivRSideNotch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/circle"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/rlMyMessage"
+                    app:layout_constraintEnd_toStartOf="@id/civMyImage" />
+
+
+            <TextView
+                    android:id="@+id/tvChatMyTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:textSize="@dimen/margin_10"
+                    app:layout_constraintEnd_toEndOf="@+id/rlMyMessage"
+                    app:layout_constraintTop_toBottomOf="@id/rlMyMessage" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civRSideImage2"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:src="@drawable/no_image"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/rlMyMessage"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <TextView
+                    android:id="@+id/tvRsideImageTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:text="Mon, Jul 08, 09:17 PM"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/ivEmptyCheck"
+
+                    app:layout_constraintTop_toBottomOf="@id/rlMyMessage" />
+
+            <ImageView
+                    android:id="@+id/ivEmptyCheck2"
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:src="@drawable/selected_dot"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvRsideImageTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvRsideImageTime" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civRSideImage3"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:src="@drawable/no_image"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/rlMyMessage"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                    android:id="@+id/ivRSideNotch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chat_drawable_sender"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/rlMyMessage"
+                    app:layout_constraintEnd_toStartOf="@id/civRSideImage2" />
+
+            <TextView
+                    android:id="@+id/tvRsideAudioTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:text="Mon, Jul 08, 09:17 PM"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/ivEmptyCheck"
+                    app:layout_constraintTop_toBottomOf="@id/rlMyMessage" />
+
+            <ImageView
+                    android:id="@+id/ivEmptyCheck3"
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:src="@drawable/chat_drawable_sender"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/tvRsideAudioTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvRsideAudioTime" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSecondUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginEnd="@dimen/margin_50"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clMyMessageLayout">
+
+
+            <RelativeLayout
+                    android:id="@+id/rlSecondMessage"
+                    android:layout_width="@dimen/margin_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/civSecondPerson"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    >
+
+                <com.jcminarro.roundkornerlayout.RoundKornerLinearLayout
+                        android:id="@+id/llPlaySecondChatVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@color/colorPrimary"
+                        android:elevation="@dimen/dp10"
+                        android:visibility="gone"
+                        app:corner_radius="@dimen/margin_20"
+                        app:layout_constraintBottom_toBottomOf="@+id/llSecondPersonImage"
+                        app:layout_constraintEnd_toEndOf="@+id/llSecondPersonImage"
+                        app:layout_constraintStart_toStartOf="@+id/llSecondPersonImage"
+                        app:layout_constraintTop_toTopOf="@+id/llSecondPersonImage">
+
+                    <ImageView
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="@dimen/margin_30"
+                            android:src="@drawable/play_button"
+                            android:tint="@color/white" />
+
+                </com.jcminarro.roundkornerlayout.RoundKornerLinearLayout>
+
+
+                <TextView
+                        android:id="@+id/tvSecondPersonMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:background="@drawable/chat_drawable_receiver"
+                        android:paddingStart="@dimen/margin_15"
+                        android:paddingTop="@dimen/dp5"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_14"
+                        android:visibility="gone" />
+
+                <LinearLayout
+                        android:id="@+id/llSecondPersonImage"
+                        android:layout_width="@dimen/margin_200"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/chat_drawable_receiver"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp10"
+                        android:visibility="gone">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/ivChatSecondMedia"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="@dimen/margin_150"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/no_image"
+                            app:layout_constraintHeight_max="@dimen/margin_150"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvMyMessage"
+                            app:riv_corner_radius="@dimen/margin_10" />
+
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cvSecondPersonAudio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:layout_marginEnd="@dimen/margin_15"
+                        android:background="@drawable/chat_drawable_receiver"
+                        android:paddingRight="@dimen/margin_5"
+                        android:visibility="gone">
+
+                    <ImageView
+                            android:id="@+id/ivLSideMic"
+                            android:layout_width="@dimen/margin_18"
+                            android:layout_height="@dimen/margin_30"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:background="@drawable/miceee"
+                            android:backgroundTint="#19B5FF"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <SeekBar
+                            android:id="@+id/seekbarYourAudio"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp5"
+                            android:paddingStart="@dimen/margin_10"
+                            android:paddingTop="@dimen/dp10"
+                            android:progressBackgroundTint="@color/dark_grey"
+                            android:progressBackgroundTintMode="multiply"
+                            android:progressTint="#19B5FF"
+                            android:secondaryProgressTint="#19B5FF"
+                            android:thumb="@drawable/circle"
+                            android:thumbTint="#19B5FF"
+                            app:layout_constraintEnd_toStartOf="@id/ivLSideMic"
+                            app:layout_constraintStart_toEndOf="@id/rlPlayLSideAudio"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                            android:id="@+id/tvLSideAudioTimer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/dp5"
+                            android:paddingBottom="@dimen/margin_2"
+                            android:text="dfgdfgdfg"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/margin_12"
+                            app:layout_constraintStart_toStartOf="@id/seekbarYourAudio"
+                            app:layout_constraintTop_toBottomOf="@id/seekbarYourAudio" />
+
+
+                    <RelativeLayout
+                            android:id="@+id/rlPlayLSideAudio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                                android:id="@+id/ivLSidePlayAudio"
+                                android:layout_width="@dimen/margin_30"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_marginEnd="@dimen/margin_5"
+                                android:src="@drawable/play_button"
+                                android:tint="#19B5FF" />
+
+                        <ImageView
+                                android:id="@+id/ivStopLSideAudio"
+                                android:layout_width="@dimen/margin_30"
+                                android:layout_height="@dimen/margin_30"
+                                android:elevation="@dimen/margin_2"
+                                android:src="@drawable/exomedia_ic_pause_white"
+                                android:tint="@color/colorPrimary"
+                                android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </RelativeLayout>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civSecondPerson"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:src="@drawable/no_image"
+                    app:layout_constraintBottom_toBottomOf="@id/rlSecondMessage"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                    android:id="@+id/tvChatSecondPersonTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_25"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:gravity="center|start"
+                    android:paddingStart="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_5"
+                    android:textSize="@dimen/margin_10"
+                    app:layout_constraintStart_toStartOf="@+id/rlSecondMessage"
+                    app:layout_constraintTop_toBottomOf="@id/rlSecondMessage" />
+
+            <ImageView
+                    android:id="@+id/ivLSideEmptyCheck"
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:src="@drawable/bg_grey"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvChatSecondPersonTime"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvChatSecondPersonTime" />
+
+            <ImageView
+                    android:id="@+id/ivLSideNotch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chat_drawable_receiver"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/rlSecondMessage"
+                    app:layout_constraintStart_toEndOf="@id/civSecondPerson" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civLSideImage2"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:src="@drawable/no_image"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/rlSecondMessage"
+
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                    android:id="@+id/tvLsideImageTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:text="Mon, Jul 08, 09:17 PM"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@id/ivLSideEmptyCheck2"
+                    app:layout_constraintTop_toBottomOf="@id/rlSecondMessage" />
+
+            <ImageView
+                    android:id="@+id/ivLSideEmptyCheck2"
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:src="@drawable/black_plus"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvLsideImageTime"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvLsideImageTime" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civLSideImage3"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:src="@drawable/ccircle"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/rlSecondMessage"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                    android:id="@+id/ivLSideNotch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chat_drawable_receiver"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/rlSecondMessage"
+
+                    app:layout_constraintStart_toEndOf="@id/civLSideImage3" />
+
+            <TextView
+                    android:id="@+id/tvLsideAudioTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:text="Mon, Jul 08, 09:17 PM"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@id/ivLsideEmptyCheck3"
+                    app:layout_constraintTop_toBottomOf="@id/rlSecondMessage" />
+
+            <ImageView
+                    android:id="@+id/ivLsideEmptyCheck3"
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp5"
+                    android:src="@drawable/answer_icon"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/tvLsideAudioTime"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvLsideAudioTime" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->

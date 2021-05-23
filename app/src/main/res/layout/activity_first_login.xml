@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.FirstLoginActivity">
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imgTop"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:src="@drawable/logo_white"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.42000002" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backFL"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_8sdp"
+        android:paddingTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/txtSliding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/robotoregular"
+            android:gravity="center"
+            android:textColor="@color/vdark_grey"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/indicator"
+            app:layout_constraintEnd_toEndOf="@+id/indicator"
+            app:layout_constraintStart_toStartOf="@+id/indicator" />
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            app:ci_drawable="@drawable/dot_selected"
+            app:ci_drawable_unselected="@drawable/dot_unselected"
+            app:ci_height="@dimen/_4sdp"
+            app:ci_width="@dimen/_4sdp"
+            app:layout_constraintBottom_toTopOf="@+id/barrier2"
+            app:layout_constraintEnd_toEndOf="@+id/releRegister"
+            app:layout_constraintStart_toStartOf="@+id/releLogin" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="releLogin,releLogintemp" />
+
+        <RelativeLayout
+            android:id="@+id/releLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/back_button_login"
+            android:drawableEnd="@drawable/ic_trending_flat_24px"
+            android:onClick="openLogin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:drawableEnd="@drawable/ic_trending_flat_24px"
+                android:drawableTint="@color/dark_grey"
+                android:text="Login"
+                android:textColor="@color/dark_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/releRegister"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/back_button_login"
+            android:drawableEnd="@drawable/ic_trending_flat_24px"
+            android:onClick="openRegister"
+            app:layout_constraintBottom_toBottomOf="@+id/releLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="@+id/releLogin">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:drawableEnd="@drawable/ic_trending_flat_24px"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/dark_grey"
+                android:text="Register"
+                android:textColor="@color/dark_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/releLogintemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/back_button_login_temp"
+            android:drawableEnd="@drawable/ic_trending_flat_24px"
+            android:onClick="openLogin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:drawableEnd="@drawable/ic_trending_flat_24px"
+                android:drawableTint="@color/white"
+                android:text="Login"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/releRegistertemp"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/back_button_login_temp"
+            android:drawableEnd="@drawable/ic_trending_flat_24px"
+            android:onClick="openRegister"
+            app:layout_constraintBottom_toBottomOf="@+id/releLogintemp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline7"
+            app:layout_constraintTop_toTopOf="@+id/releLogintemp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:clickable="false"
+                android:drawableEnd="@drawable/ic_trending_flat_24px"
+                android:drawablePadding="@dimen/_5sdp"
+                android:drawableTint="@color/white"
+                android:text="Register"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

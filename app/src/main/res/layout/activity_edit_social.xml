@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.editprofiel.EditSocialActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center"
+        android:text="Social Links"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imbBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goBack"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_chevron_left_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtinput1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:hint="Facebook Profile Link"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotoregular"
+            android:imeOptions="actionNext" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtinput2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Instagram Profile Link"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput1"
+        app:layout_constraintStart_toStartOf="@+id/txtinput1"
+        app:layout_constraintTop_toBottomOf="@+id/txtinput1">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtInsta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtinput3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Snapchat Profile Link"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput1"
+        app:layout_constraintStart_toStartOf="@+id/txtinput1"
+        app:layout_constraintTop_toBottomOf="@+id/txtinput2">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtSnap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionNext" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtinput4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Twitter Profile Link"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput1"
+        app:layout_constraintStart_toStartOf="@+id/txtinput1"
+        app:layout_constraintTop_toBottomOf="@+id/txtinput3">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtinput5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Linked in Profile Link"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput1"
+        app:layout_constraintStart_toStartOf="@+id/txtinput1"
+        app:layout_constraintTop_toBottomOf="@+id/txtinput4">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edtLinkedIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/fb"
+        app:layout_constraintBottom_toBottomOf="@+id/txtinput1"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput1"
+        app:layout_constraintTop_toTopOf="@+id/txtinput1" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/insta"
+        app:layout_constraintBottom_toBottomOf="@+id/txtinput2"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput2"
+        app:layout_constraintTop_toTopOf="@+id/txtinput2" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/snap"
+        app:layout_constraintBottom_toBottomOf="@+id/txtinput3"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput3"
+        app:layout_constraintTop_toTopOf="@+id/txtinput3" />
+
+    <ImageView
+        android:id="@+id/img4"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/twit"
+        app:layout_constraintBottom_toBottomOf="@+id/txtinput4"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput4"
+        app:layout_constraintTop_toTopOf="@+id/txtinput4" />
+
+    <ImageView
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:src="@drawable/linkedin"
+        app:layout_constraintBottom_toBottomOf="@+id/txtinput5"
+        app:layout_constraintEnd_toEndOf="@+id/txtinput5"
+        app:layout_constraintTop_toTopOf="@+id/txtinput5" />
+
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/back_button_fill"
+        android:onClick="callService"
+        android:text="Update"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

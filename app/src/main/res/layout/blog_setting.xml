@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".chat.BlockedUser">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+    >
+        <include
+                android:id="@+id/rlTool"
+                layout="@layout/back_icon_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+        />
+       <!-- <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_60"
+                android:layout_marginTop="@dimen/margin_30"
+
+        >
+
+            <ImageView
+                    android:id="@+id/ivbackArrow"
+                    android:layout_marginTop="@dimen/margin_25"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrow_left"/>
+
+            <unilife.com.unilife.Utils.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blog Settings"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/margin_25"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:layout_centerInParent="true"
+            />
+
+
+
+            <ImageView
+                    android:id="@+id/ivdot"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_width="@dimen/margin_30"
+                    android:layout_height="@dimen/margin_30"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/dot_line"/>
+
+
+
+
+
+        </RelativeLayout>-->
+
+    </LinearLayout>
+
+
+
+
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+            >
+
+                <LinearLayout
+                              android:id="@+id/llViewSaved"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical"
+                >
+
+
+
+
+                <unilife.com.unilife.utils.RegularTextView
+                    android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Saved Blogs "
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textSize="@dimen/margin_20"
+                        android:textColor="@color/medium_black"
+                />
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginLeft="@dimen/margin_15"
+                      android:layout_marginRight="@dimen/margin_15"
+                      android:layout_marginTop="@dimen/margin_10"
+                      android:background="@color/light_grey"
+                />
+
+                </LinearLayout>
+
+
+
+        <LinearLayout
+                android:id="@+id/llSavedRead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+
+                <unilife.com.unilife.utils.RegularTextView
+                    android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saved Read Blogs"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textSize="@dimen/margin_20"
+                        android:textColor="@color/medium_black"
+                />
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginLeft="@dimen/margin_15"
+                      android:layout_marginRight="@dimen/margin_15"
+                      android:layout_marginTop="@dimen/margin_10"
+                      android:background="@color/light_grey"
+                />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/llViewLike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+                <unilife.com.unilife.utils.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Liked Blogs"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textSize="@dimen/margin_20"
+                        android:textColor="@color/medium_black"
+                />
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:layout_marginLeft="@dimen/margin_15"
+                      android:layout_marginRight="@dimen/margin_15"
+                      android:layout_marginTop="@dimen/margin_10"
+                      android:background="@color/light_grey"
+                />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/llViewShared"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+        >
+                <unilife.com.unilife.utils.RegularTextView
+                    android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Shared Blog"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textSize="@dimen/margin_20"
+                        android:textColor="@color/medium_black"
+                />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginRight="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:background="@color/light_grey"
+                />
+
+
+        </LinearLayout>
+            </LinearLayout>
+
+
+
+  <!--  <include
+            layout="@layout/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+    />-->
+
+
+</LinearLayout>

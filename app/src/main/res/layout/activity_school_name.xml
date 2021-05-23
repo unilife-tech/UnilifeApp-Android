@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_3"
+    tools:context=".login.SchoolNameActivity">
+
+    <EditText
+        android:id="@+id/edtSchool"
+        android:layout_width="0sp"
+        android:inputType="textCapWords"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/back_edittext_login"
+        android:hint="Enter School Name"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_edittext_login"
+        android:hint="Enter Academic Email"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/edtSchool"
+        app:layout_constraintStart_toStartOf="@+id/edtSchool"
+        app:layout_constraintTop_toBottomOf="@+id/edtSchool" />
+
+    <EditText
+        android:id="@+id/edtConfirmEmail"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/back_edittext_login"
+        android:hint="Confirm Academic Email"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/edtSchool"
+        app:layout_constraintStart_toStartOf="@+id/edtSchool"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+    <TextView
+        android:id="@+id/txtNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="callNext"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edtSchool"
+        app:layout_constraintStart_toStartOf="@+id/edtSchool"
+        app:layout_constraintTop_toBottomOf="@+id/edtConfirmEmail" />
+
+    <TextView
+        android:id="@+id/txtNote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Use your academic email to \n connect your school"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edtSchool"
+        app:layout_constraintStart_toStartOf="@+id/edtSchool"
+        app:layout_constraintTop_toBottomOf="@+id/txtNext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

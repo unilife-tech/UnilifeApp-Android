@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivdot"
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/grey_dot" />
+
+            <View
+                    android:id="@+id/vw"
+                    android:layout_width="5dp"
+                    android:layout_height="@dimen/margin_100"
+                    android:layout_gravity="center"
+                    android:background="@color/medium_grey" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:orientation="vertical">
+
+
+                <unilife.com.unilife.utils.RegularTextView
+                        android:id="@+id/tvQues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:text="Name"
+                        android:minLines="2"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:textColor="@color/medium_black"
+                        android:textSize="@dimen/margin_15" />
+
+
+                <RelativeLayout
+                        android:id="@+id/rlAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/etAnswer"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_60"
+                            android:hint="type answer here..."
+                            android:padding="@dimen/margin_8"
+                            android:layout_toStartOf="@+id/ivCourses"
+                            android:textColor="@color/colorPrimary"
+                            android:backgroundTint="@color/black"
+                    />
+
+                    <ImageView
+                            android:id="@+id/ivCourses"
+                            android:layout_width="@dimen/margin_25"
+                            android:layout_height="@dimen/margin_25"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:padding="@dimen/margin_2"
+                            android:visibility="gone"
+                            android:src="@drawable/plus_courses_covered" />
+
+                </RelativeLayout>
+
+                <io.apptik.widget.multiselectspinner.MultiSelectSpinner
+                        android:id="@+id/categoriesspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/plus_courses_covered"
+                        android:padding="@dimen/margin_10"
+                        android:visibility="gone"
+
+
+                />
+
+                <TextView
+                        android:id="@+id/tvplaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                />
+
+                <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/medium_black"
+                        android:visibility="gone" />
+
+
+                <io.apptik.widget.multiselectspinner.MultiSelectSpinner
+                        android:id="@+id/intrestspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_custom_background"
+                        android:hint="type your answer here..."
+                        android:padding="@dimen/margin_10"
+                        android:visibility="gone"
+
+
+                />
+
+                <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/medium_black"
+                        android:visibility="gone" />
+
+
+                <io.apptik.widget.multiselectspinner.MultiSelectSpinner
+                        android:id="@+id/hobbiesspinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_custom_background"
+                        android:hint="type your answer here..."
+                        android:padding="@dimen/margin_10"
+                        android:visibility="gone" />
+
+                <View
+                        android:id="@+id/vieew3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/medium_black"
+                        android:visibility="gone">
+
+                </View>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

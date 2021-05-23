@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Unilife</string>
+    <string name="internet_offline">The internet connection appears to be offline</string>
+
+    <string name="signin">
+        <u>Sign In</u>
+    </string>
+
+    <string name="skip">
+        <u>Skip</u>
+    </string>
+
+    <string name="open" />
+    <string name="close" />
+    <string name="retry">Retry</string>
+    <string name="connection_timeout">Connection TimeOut</string>
+    <string name="cancel">Cancel</string>
+    <string name="default_notification_channel_id">Unilife</string>
+
+
+    <string name="contectus">
+        <u>Contact Us</u>
+    </string>
+    <string name="search_coupons_more"><![CDATA[Search Coupons & More]]></string>
+
+
+    <string name="title_activity_notification_listing">NotificationListing</string>
+    <string name="share_with_friends">Share with Friends</string>
+    <string name="play_store_link"><![CDATA[https://play.google.com/store/apps/details?id=unilife.com.unilife&hl=en]]></string>
+    <string name="invite">Invite</string>
+    <string name="chat_archive">Last saved backup of chat will be available once archived</string>
+    <string name="chat_archive_title">Chat Archive</string>
+    <string name="ViewSavedMultiMediia">View Saved MultiMedia</string>
+    <string name="BlockedGroupUsers">Blocked Users</string>
+    <string name="Add_Participant">Add Participant</string>
+    <string name="Remove_Participant">Remove Participant</string>
+    <string name="Audio">Audio</string>
+    <string name="Video">Video</string>
+    <string name="Images">Images</string>
+    <string name="documents">Documents</string>
+    <string name="forgot_password">Forgot Password</string>
+
+
+    <!--
+  JKS >>   unilife, unilife
+
+Play store
+     B2b@Unilifeapp.com
+12wewewewe
+     -->
+
+</resources>

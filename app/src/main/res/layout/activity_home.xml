@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llToolBar"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_8"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginRight="@dimen/margin_8"
+            android:background="@drawable/radius_white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_6"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="start|center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/margin_18"
+                    android:layout_height="@dimen/margin_18"
+                    android:background="@drawable/search"
+                    android:backgroundTint="@color/dark_grey" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:gravity="start|center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Search for Coupons &amp; more"
+                    android:singleLine="true"
+                    android:textColor="@color/dark_grey"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="@dimen/margin_12"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llSearch"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8">
+
+                <EditText
+                    android:id="@+id/edtOpinion"
+                    android:layout_width="0sp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/back_home_edit"
+                    android:drawableEnd="@drawable/ic_photo_library_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:focusable="false"
+                    android:fontFamily="@font/robotoregular"
+                    android:hint="What opinion do you wanna Share"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@+id/edtOpinion"
+                    app:layout_constraintStart_toStartOf="@+id/edtOpinion"
+                    app:layout_constraintTop_toBottomOf="@+id/edtOpinion">
+
+                    <TextView
+                        android:id="@+id/txtMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_photo_library_black_24dp"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:drawableTint="#a8cf45"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_6sdp"
+                        android:text="Media"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@+id/text3"
+                        app:layout_constraintStart_toStartOf="@+id/txt1"
+                        app:layout_constraintTop_toTopOf="@+id/text3" />
+
+                    <TextView
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:background="@color/medium_grey" />
+
+                    <TextView
+                        android:id="@+id/txtEvent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_event_note_black_24dp"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:drawableTint="#9387ff"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_6sdp"
+                        android:text="Event"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+                    <TextView
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:background="@color/medium_grey" />
+
+                    <TextView
+                        android:id="@+id/txtPoll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_poll_black_24dp"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:drawableTint="#ff7e7e"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_6sdp"
+                        android:text="Poll"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/txt1"
+                        app:layout_constraintStart_toEndOf="@+id/text3"
+                        app:layout_constraintTop_toTopOf="@+id/text3" />
+
+                </LinearLayout>
+
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/llAddPost"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="@dimen/margin_10"-->
+                <!--                    android:layout_marginRight="@dimen/margin_15"-->
+                <!--                    android:background="@drawable/border_blue_cornor"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+                <!--                    <unilife.com.unilife.utils.RegularTextView-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:paddingStart="@dimen/margin_28"-->
+                <!--                        android:paddingTop="@dimen/margin_10"-->
+                <!--                        android:paddingEnd="@dimen/margin_28"-->
+                <!--                        android:paddingBottom="@dimen/margin_10"-->
+                <!--                        android:text="Add New Post"-->
+                <!--                        android:textColor="@color/white" />-->
+
+                <!--                </LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcyMain"
+                    android:layout_width="0sp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutEmpty"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line1">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/txtMiddle"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/empty_icon" />
+
+                    <TextView
+                        android:id="@+id/txtMiddle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_centerInParent="true" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtMiddle"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center"
+                        android:text="No Post Yet"
+                        android:textColor="@color/vdark_grey"
+                        android:textSize="@dimen/_18sdp" />
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
